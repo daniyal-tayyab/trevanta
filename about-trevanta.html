@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Bootstrap -->
+        <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+    
+           <!-- AOS -->
+    
+           <link rel="stylesheet" href="packages/aos.css">
+           <script src="packages/aos.js"></script>
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathPlugin.min.js"></script>
+        <title></title>
+    </head>
+<body>
+    <section class="header-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 d-flex align-items-center header-navbar">
+                    <div class="social-links d-flex">
+                        <a href="#"><img src="images/insta-icon.png" alt="Trevanta on Instagram"></a>
+                        <a href="#"><img src="images/facebook-icon.png" alt="Trevanta on Facebook"></a>
+                        <a href="#"><img src="images/twitter-icon.png" alt="Trevanta on Twitter"></a>
+
+                    </div>
+                    <div class="navbar-logo d-flex align-items-center">
+                        <img src="images/Trevanta-Logo-1.png" alt="">
+                        <img src="images/Trevanta-Logo-2.png" alt="">
+                    </div>
+
+                    <button class="nav-toggle-btn" onclick="openNav()">
+                        <img src="images/toggle-btn.png" alt="Toggle Menu">
+                    </button>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- The overlay -->
+<div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="#">Home</a>
+      <a href="#">About us</a>
+      <a href="#">Services</a>
+      <a href="#">Careers</a>
+      <a href="#">Blogs</a>
+      <a href="#">Contact us</a>
+      <!-- <div class="nav-first-svg"></div>
+      <div class="nav-second-svg"></div> -->
+
+    
+    </div>
+   
+      
+
+        
+
+    
+  
+  </div>
+  
+        
+
+    </section>
+
+    <section class="about-us-hero">
+        <div class="container">
+            <h1>ABOUT US</h1>
+            <p>Trevanta is a Dubai-based provider of IT solutions working on projects spanning up to 20 different sectors. Our areas of expertise include improving user experiences through creative design, incorporating new technology into the creation of websites and applications, and more.</p>
+        </div>
+    </section>
+    <section class="about-us-projects">
+
+        <div class="container">
+            <section class="d-flex projects-by-trevanta">
+                <article class="project-desc">
+                    <img src="images/project-name.png" alt="Projects by Trevanta">
+                    <h3>Project Name</h3>
+                    <div class="project-social-links">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <g filter="url(#filter0_bd_651_148)">
+                            <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear_651_148)" shape-rendering="crispEdges"/>
+                            </g>
+                            <path d="M19.9399 18C19.9397 18.5305 19.7287 19.0391 19.3534 19.4139C18.9782 19.7888 18.4694 19.9993 17.9389 19.999C17.4085 19.9988 16.8999 19.7878 16.525 19.4125C16.1501 19.0373 15.9397 18.5285 15.9399 17.998C15.9402 17.4676 16.1512 16.959 16.5264 16.5841C16.9017 16.2092 17.4105 15.9988 17.9409 15.999C18.4714 15.9993 18.98 16.2103 19.3549 16.5855C19.7297 16.9608 19.9402 17.4696 19.9399 18ZM19.9999 21.48H15.9999V34H19.9999V21.48ZM26.3199 21.48H22.3399V34H26.2799V27.43C26.2799 23.77 31.0499 23.43 31.0499 27.43V34H34.9999V26.07C34.9999 19.9 27.9399 20.13 26.2799 23.16L26.3199 21.48Z" fill="#228F7E"/>
+                            <defs>
+                            <filter id="filter0_bd_651_148" x="-50" y="-50" width="186" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+                            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_651_148"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dx="46" dy="46"/>
+                            <feGaussianBlur stdDeviation="20"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.0173077 0 0 0 0 0.0865384 0 0 0 0 0.09 0 0 0 0.2 0"/>
+                            <feBlend mode="normal" in2="effect1_backgroundBlur_651_148" result="effect2_dropShadow_651_148"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_651_148" result="shape"/>
+                            </filter>
+                            <linearGradient id="paint0_linear_651_148" x1="13.0556" y1="-18.0556" x2="52.6738" y2="36.5672" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="white"/>
+                            <stop offset="0.237864" stop-opacity="0"/>
+                            <stop offset="0.472362" stop-color="#1ABB9A"/>
+                            <stop offset="0.812781" stop-color="#1ABB9A"/>
+                            <stop offset="1" stop-color="#000749" stop-opacity="0"/>
+                            </linearGradient>
+                            </defs>
+                            </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <g filter="url(#filter0_bd_651_141)">
+                            <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear_651_141)" shape-rendering="crispEdges"/>
+                            </g>
+                            <path d="M25 16H21C18.2386 16 16 18.2386 16 21V29C16 31.7614 18.2386 34 21 34H29C31.7614 34 34 31.7614 34 29V21C34 18.2386 31.7614 16 29 16H25Z" stroke="#228F7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M25 21C27.2091 21 29 22.7909 29 25C29 27.2091 27.2091 29 25 29C22.7909 29 21 27.2091 21 25C21 22.7909 22.7909 21 25 21Z" stroke="#228F7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M30 21.5C30.8284 21.5 31.5 20.8284 31.5 20C31.5 19.1716 30.8284 18.5 30 18.5C29.1716 18.5 28.5 19.1716 28.5 20C28.5 20.8284 29.1716 21.5 30 21.5Z" fill="#228F7E"/>
+                            <defs>
+                            <filter id="filter0_bd_651_141" x="-50" y="-50" width="186" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+                            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_651_141"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dx="46" dy="46"/>
+                            <feGaussianBlur stdDeviation="20"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.0173077 0 0 0 0 0.0865384 0 0 0 0 0.09 0 0 0 0.2 0"/>
+                            <feBlend mode="normal" in2="effect1_backgroundBlur_651_141" result="effect2_dropShadow_651_141"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_651_141" result="shape"/>
+                            </filter>
+                            <linearGradient id="paint0_linear_651_141" x1="13.0556" y1="-18.0556" x2="52.6738" y2="36.5672" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="white"/>
+                            <stop offset="0.237864" stop-opacity="0"/>
+                            <stop offset="0.472362" stop-color="#1ABB9A"/>
+                            <stop offset="0.812781" stop-color="#1ABB9A"/>
+                            <stop offset="1" stop-color="#000749" stop-opacity="0"/>
+                            </linearGradient>
+                            </defs>
+                            </svg></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <g filter="url(#filter0_bd_651_137)">
+                            <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear_651_137)" shape-rendering="crispEdges"/>
+                            </g>
+                            <path d="M27.3334 26.7502H30.2501L31.4167 22.0835H27.3334V19.7502C27.3334 18.5485 27.3334 17.4168 29.6667 17.4168H31.4167V13.4968C31.0364 13.4467 29.6002 13.3335 28.0836 13.3335C24.9161 13.3335 22.6667 15.2667 22.6667 18.8168V22.0835H19.1667V26.7502H22.6667V36.6668H27.3334V26.7502Z" fill="#228F7E"/>
+                            <defs>
+                            <filter id="filter0_bd_651_137" x="-50" y="-50" width="186" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+                            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_651_137"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dx="46" dy="46"/>
+                            <feGaussianBlur stdDeviation="20"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0.0173077 0 0 0 0 0.0865384 0 0 0 0 0.09 0 0 0 0.2 0"/>
+                            <feBlend mode="normal" in2="effect1_backgroundBlur_651_137" result="effect2_dropShadow_651_137"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_651_137" result="shape"/>
+                            </filter>
+                            <linearGradient id="paint0_linear_651_137" x1="13.0556" y1="-18.0556" x2="52.6738" y2="36.5672" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="white"/>
+                            <stop offset="0.237864" stop-opacity="0"/>
+                            <stop offset="0.472362" stop-color="#1ABB9A"/>
+                            <stop offset="0.812781" stop-color="#1ABB9A"/>
+                            <stop offset="1" stop-color="#000749" stop-opacity="0"/>
+                            </linearGradient>
+                            </defs>
+                            </svg></a>
+                    </div>
+                </article>
+
+                <article class="project-desc">
+                    <img src="images/project-excluvio.png" alt="Projects by Trevanta">
+                    <h3>Excluvio</h3>
+                    <div class="project-social-links">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <g filter="url(#filter0_bd_202_7946)">
+                                <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear_202_7946)" shape-rendering="crispEdges"/>
+                                </g>
+                                <path d="M19.9399 18C19.9397 18.5305 19.7287 19.0391 19.3534 19.4139C18.9782 19.7888 18.4694 19.9993 17.9389 19.999C17.4085 19.9988 16.8999 19.7878 16.525 19.4125C16.1501 19.0373 15.9397 18.5285 15.9399 17.998C15.9402 17.4676 16.1512 16.959 16.5264 16.5841C16.9017 16.2092 17.4105 15.9988 17.9409 15.999C18.4714 15.9993 18.98 16.2103 19.3549 16.5855C19.7297 16.9608 19.9402 17.4696 19.9399 18ZM19.9999 21.48H15.9999V34H19.9999V21.48ZM26.3199 21.48H22.3399V34H26.2799V27.43C26.2799 23.77 31.0499 23.43 31.0499 27.43V34H34.9999V26.07C34.9999 19.9 27.9399 20.13 26.2799 23.16L26.3199 21.48Z" fill="#F8DC65"/>
+                                <defs>
+                                <filter id="filter0_bd_202_7946" x="-50" y="-50" width="186" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_202_7946"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="46" dy="46"/>
+                                <feGaussianBlur stdDeviation="20"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.0173077 0 0 0 0 0.0865384 0 0 0 0 0.09 0 0 0 0.2 0"/>
+                                <feBlend mode="normal" in2="effect1_backgroundBlur_202_7946" result="effect2_dropShadow_202_7946"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_202_7946" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_202_7946" x1="13.0556" y1="-18.0556" x2="52.6738" y2="36.5672" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.237864" stop-opacity="0"/>
+                                <stop offset="0.472362" stop-color="#F8DC65"/>
+                                <stop offset="0.812781" stop-color="#F8DC65"/>
+                                <stop offset="1" stop-color="#000749" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                                </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <g filter="url(#filter0_bd_202_7945)">
+                                <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear_202_7945)" shape-rendering="crispEdges"/>
+                                </g>
+                                <path d="M25 16H21C18.2386 16 16 18.2386 16 21V29C16 31.7614 18.2386 34 21 34H29C31.7614 34 34 31.7614 34 29V21C34 18.2386 31.7614 16 29 16H25Z" stroke="#F8DC65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M25 21C27.2091 21 29 22.7909 29 25C29 27.2091 27.2091 29 25 29C22.7909 29 21 27.2091 21 25C21 22.7909 22.7909 21 25 21Z" stroke="#F8DC65" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M30 21.5C30.8284 21.5 31.5 20.8284 31.5 20C31.5 19.1716 30.8284 18.5 30 18.5C29.1716 18.5 28.5 19.1716 28.5 20C28.5 20.8284 29.1716 21.5 30 21.5Z" fill="#F8DC65"/>
+                                <defs>
+                                <filter id="filter0_bd_202_7945" x="-50" y="-50" width="186" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_202_7945"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="46" dy="46"/>
+                                <feGaussianBlur stdDeviation="20"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.0173077 0 0 0 0 0.0865384 0 0 0 0 0.09 0 0 0 0.2 0"/>
+                                <feBlend mode="normal" in2="effect1_backgroundBlur_202_7945" result="effect2_dropShadow_202_7945"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_202_7945" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_202_7945" x1="13.0556" y1="-18.0556" x2="52.6738" y2="36.5672" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.237864" stop-opacity="0"/>
+                                <stop offset="0.472362" stop-color="#F8DC65"/>
+                                <stop offset="0.812781" stop-color="#F8DC65"/>
+                                <stop offset="1" stop-color="#000749" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                                </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <g filter="url(#filter0_bd_202_7944)">
+                                <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear_202_7944)" shape-rendering="crispEdges"/>
+                                </g>
+                                <path d="M27.3334 26.7502H30.2501L31.4167 22.0835H27.3334V19.7502C27.3334 18.5485 27.3334 17.4168 29.6667 17.4168H31.4167V13.4968C31.0364 13.4467 29.6002 13.3335 28.0836 13.3335C24.9161 13.3335 22.6667 15.2667 22.6667 18.8168V22.0835H19.1667V26.7502H22.6667V36.6668H27.3334V26.7502Z" fill="#F8DC65"/>
+                                <defs>
+                                <filter id="filter0_bd_202_7944" x="-50" y="-50" width="186" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_202_7944"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="46" dy="46"/>
+                                <feGaussianBlur stdDeviation="20"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.0173077 0 0 0 0 0.0865384 0 0 0 0 0.09 0 0 0 0.2 0"/>
+                                <feBlend mode="normal" in2="effect1_backgroundBlur_202_7944" result="effect2_dropShadow_202_7944"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_202_7944" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_202_7944" x1="13.0556" y1="-18.0556" x2="52.6738" y2="36.5672" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.237864" stop-opacity="0"/>
+                                <stop offset="0.472362" stop-color="#F8DC65"/>
+                                <stop offset="0.812781" stop-color="#F8DC65"/>
+                                <stop offset="1" stop-color="#000749" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                                </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-desc">
+                    <img src="images/project-chain-homes.png" alt="Projects by Trevanta">
+                    <h3>Chain Homes</h3>
+                    <div class="project-social-links">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <g filter="url(#filter0_bd_202_7961)">
+                                <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear_202_7961)" shape-rendering="crispEdges"/>
+                                </g>
+                                <path d="M19.9399 18C19.9397 18.5305 19.7287 19.0391 19.3534 19.4139C18.9782 19.7888 18.4694 19.9993 17.9389 19.999C17.4085 19.9988 16.8999 19.7878 16.525 19.4125C16.1501 19.0373 15.9397 18.5285 15.9399 17.998C15.9402 17.4676 16.1512 16.959 16.5264 16.5841C16.9017 16.2092 17.4105 15.9988 17.9409 15.999C18.4714 15.9993 18.98 16.2103 19.3549 16.5855C19.7297 16.9608 19.9402 17.4696 19.9399 18ZM19.9999 21.48H15.9999V34H19.9999V21.48ZM26.3199 21.48H22.3399V34H26.2799V27.43C26.2799 23.77 31.0499 23.43 31.0499 27.43V34H34.9999V26.07C34.9999 19.9 27.9399 20.13 26.2799 23.16L26.3199 21.48Z" fill="#00DBF9"/>
+                                <defs>
+                                <filter id="filter0_bd_202_7961" x="-50" y="-50" width="186" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_202_7961"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="46" dy="46"/>
+                                <feGaussianBlur stdDeviation="20"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.0173077 0 0 0 0 0.0865384 0 0 0 0 0.09 0 0 0 0.2 0"/>
+                                <feBlend mode="normal" in2="effect1_backgroundBlur_202_7961" result="effect2_dropShadow_202_7961"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_202_7961" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_202_7961" x1="13.0556" y1="-18.0556" x2="52.6738" y2="36.5672" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.237864" stop-opacity="0"/>
+                                <stop offset="0.472362" stop-color="#00DBF9"/>
+                                <stop offset="0.812781" stop-color="#00DBF9"/>
+                                <stop offset="1" stop-color="#000749" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                                </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <g filter="url(#filter0_bd_202_7960)">
+                                <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear_202_7960)" shape-rendering="crispEdges"/>
+                                </g>
+                                <path d="M25 16H21C18.2386 16 16 18.2386 16 21V29C16 31.7614 18.2386 34 21 34H29C31.7614 34 34 31.7614 34 29V21C34 18.2386 31.7614 16 29 16H25Z" stroke="#00DBF9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M25 21C27.2091 21 29 22.7909 29 25C29 27.2091 27.2091 29 25 29C22.7909 29 21 27.2091 21 25C21 22.7909 22.7909 21 25 21Z" stroke="#00DBF9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M30 21.5C30.8284 21.5 31.5 20.8284 31.5 20C31.5 19.1716 30.8284 18.5 30 18.5C29.1716 18.5 28.5 19.1716 28.5 20C28.5 20.8284 29.1716 21.5 30 21.5Z" fill="#00DBF9"/>
+                                <defs>
+                                <filter id="filter0_bd_202_7960" x="-50" y="-50" width="186" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_202_7960"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="46" dy="46"/>
+                                <feGaussianBlur stdDeviation="20"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.0173077 0 0 0 0 0.0865384 0 0 0 0 0.09 0 0 0 0.2 0"/>
+                                <feBlend mode="normal" in2="effect1_backgroundBlur_202_7960" result="effect2_dropShadow_202_7960"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_202_7960" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_202_7960" x1="13.0556" y1="-18.0556" x2="52.6738" y2="36.5672" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.237864" stop-opacity="0"/>
+                                <stop offset="0.472362" stop-color="#00DBF9"/>
+                                <stop offset="0.812781" stop-color="#00DBF9"/>
+                                <stop offset="1" stop-color="#000749" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                                </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <g filter="url(#filter0_bd_202_7959)">
+                                <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear_202_7959)" shape-rendering="crispEdges"/>
+                                </g>
+                                <path d="M27.3334 26.7502H30.2501L31.4167 22.0835H27.3334V19.7502C27.3334 18.5485 27.3334 17.4168 29.6667 17.4168H31.4167V13.4968C31.0364 13.4467 29.6002 13.3335 28.0836 13.3335C24.9161 13.3335 22.6667 15.2667 22.6667 18.8168V22.0835H19.1667V26.7502H22.6667V36.6668H27.3334V26.7502Z" fill="#00DBF9"/>
+                                <defs>
+                                <filter id="filter0_bd_202_7959" x="-50" y="-50" width="186" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_202_7959"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="46" dy="46"/>
+                                <feGaussianBlur stdDeviation="20"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.0173077 0 0 0 0 0.0865384 0 0 0 0 0.09 0 0 0 0.2 0"/>
+                                <feBlend mode="normal" in2="effect1_backgroundBlur_202_7959" result="effect2_dropShadow_202_7959"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_202_7959" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_202_7959" x1="13.0556" y1="-18.0556" x2="52.6738" y2="36.5672" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.237864" stop-opacity="0"/>
+                                <stop offset="0.472362" stop-color="#00DBF9"/>
+                                <stop offset="0.812781" stop-color="#00DBF9"/>
+                                <stop offset="1" stop-color="#000749" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                                </svg>
+                        </a>
+                    </div>
+                </article>
+
+                
+                <article class="project-desc">
+                    <img src="images/project-red-change.png" alt="Projects by Trevanta">
+                    <h3>Chain Homes</h3>
+                    <div class="project-social-links">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <g filter="url(#filter0_bd_202_7976)">
+                                <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear_202_7976)" shape-rendering="crispEdges"/>
+                                </g>
+                                <path d="M19.9399 18C19.9397 18.5305 19.7287 19.0391 19.3534 19.4139C18.9782 19.7888 18.4694 19.9993 17.9389 19.999C17.4085 19.9988 16.8999 19.7878 16.525 19.4125C16.1501 19.0373 15.9397 18.5285 15.9399 17.998C15.9402 17.4676 16.1512 16.959 16.5264 16.5841C16.9017 16.2092 17.4105 15.9988 17.9409 15.999C18.4714 15.9993 18.98 16.2103 19.3549 16.5855C19.7297 16.9608 19.9402 17.4696 19.9399 18ZM19.9999 21.48H15.9999V34H19.9999V21.48ZM26.3199 21.48H22.3399V34H26.2799V27.43C26.2799 23.77 31.0499 23.43 31.0499 27.43V34H34.9999V26.07C34.9999 19.9 27.9399 20.13 26.2799 23.16L26.3199 21.48Z" fill="#C62121"/>
+                                <defs>
+                                <filter id="filter0_bd_202_7976" x="-50" y="-50" width="186" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_202_7976"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="46" dy="46"/>
+                                <feGaussianBlur stdDeviation="20"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.0173077 0 0 0 0 0.0865384 0 0 0 0 0.09 0 0 0 0.2 0"/>
+                                <feBlend mode="normal" in2="effect1_backgroundBlur_202_7976" result="effect2_dropShadow_202_7976"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_202_7976" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_202_7976" x1="13.0556" y1="-18.0556" x2="52.6738" y2="36.5672" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.237864" stop-opacity="0"/>
+                                <stop offset="0.472362" stop-color="#C62121"/>
+                                <stop offset="0.812781" stop-color="#C62121"/>
+                                <stop offset="1" stop-color="#000749" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                                </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <g filter="url(#filter0_bd_202_7975)">
+                                <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear_202_7975)" shape-rendering="crispEdges"/>
+                                </g>
+                                <path d="M25 16H21C18.2386 16 16 18.2386 16 21V29C16 31.7614 18.2386 34 21 34H29C31.7614 34 34 31.7614 34 29V21C34 18.2386 31.7614 16 29 16H25Z" stroke="#C62121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M25 21C27.2091 21 29 22.7909 29 25C29 27.2091 27.2091 29 25 29C22.7909 29 21 27.2091 21 25C21 22.7909 22.7909 21 25 21Z" stroke="#C62121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M30 21.5C30.8284 21.5 31.5 20.8284 31.5 20C31.5 19.1716 30.8284 18.5 30 18.5C29.1716 18.5 28.5 19.1716 28.5 20C28.5 20.8284 29.1716 21.5 30 21.5Z" fill="#C62121"/>
+                                <defs>
+                                <filter id="filter0_bd_202_7975" x="-50" y="-50" width="186" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_202_7975"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="46" dy="46"/>
+                                <feGaussianBlur stdDeviation="20"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.0173077 0 0 0 0 0.0865384 0 0 0 0 0.09 0 0 0 0.2 0"/>
+                                <feBlend mode="normal" in2="effect1_backgroundBlur_202_7975" result="effect2_dropShadow_202_7975"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_202_7975" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_202_7975" x1="13.0556" y1="-18.0556" x2="52.6738" y2="36.5672" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.237864" stop-opacity="0"/>
+                                <stop offset="0.472362" stop-color="#C62121"/>
+                                <stop offset="0.812781" stop-color="#C62121"/>
+                                <stop offset="1" stop-color="#000749" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                                </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <g filter="url(#filter0_bd_202_7974)">
+                                <circle cx="25" cy="25" r="24.5" stroke="url(#paint0_linear_202_7974)" shape-rendering="crispEdges"/>
+                                </g>
+                                <path d="M27.3334 26.7502H30.2501L31.4167 22.0835H27.3334V19.7502C27.3334 18.5485 27.3334 17.4168 29.6667 17.4168H31.4167V13.4968C31.0364 13.4467 29.6002 13.3335 28.0836 13.3335C24.9161 13.3335 22.6667 15.2667 22.6667 18.8168V22.0835H19.1667V26.7502H22.6667V36.6668H27.3334V26.7502Z" fill="#C62121"/>
+                                <defs>
+                                <filter id="filter0_bd_202_7974" x="-50" y="-50" width="186" height="186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="25"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_202_7974"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="46" dy="46"/>
+                                <feGaussianBlur stdDeviation="20"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0.0173077 0 0 0 0 0.0865384 0 0 0 0 0.09 0 0 0 0.2 0"/>
+                                <feBlend mode="normal" in2="effect1_backgroundBlur_202_7974" result="effect2_dropShadow_202_7974"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_202_7974" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_202_7974" x1="13.0556" y1="-18.0556" x2="52.6738" y2="36.5672" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.237864" stop-opacity="0"/>
+                                <stop offset="0.472362" stop-color="#C62121"/>
+                                <stop offset="0.812781" stop-color="#C62121"/>
+                                <stop offset="1" stop-color="#000749" stop-opacity="0"/>
+                                </linearGradient>
+                                </defs>
+                                </svg>
+                        </a>
+                    </div>
+                </article>
+                
+            </section>
+        </div>
+
+    </section>
+    <section class="about-ceo-msg">
+        <div class="container">
+            <div class="row">
+                <div class="col-4"><div class="ceo-img-wrapper"><img src="images/Trevanta-CEO.png" alt="Trevanta CEO" class="ceo-photo"></div></div>
+                <div class="col-8 ceo-msg-cnt">
+                    <h2>CEO MESSAGE</h2>
+                    <p class="about-txt">‘’Trevanta enables organizations to experience extraordinary growth, which is my ultimate goal. We go above and beyond client expectations as a successful B2B business to improve their lives. Seeing our customers succeed makes us happy and motivates us to keep pushing the envelope. Trevanta focuses on creating successful journeys that have an impact.’’
+
+                      </p>
+                      <p class="name-designation">  <span class="name">Ahsan Rizvi</span><span class="designation"> - CEO (Chief Executive Officer)</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <footer>
+            <div class="container">
+                <div class="row justify-center">
+                    <div class="col-12">
+                        <img src="images/footer-logo.png" alt="Logo of Traventa Technology">
+
+                        <article class="footer-nav d-flex flex-column">
+                            <p>2023 Trevanta. All rights reserved</p>
+                            <ul class="d-flex justify-content-center">
+                                <li class="footer-nav-links"><a href="index.html">Home</a></li>
+                                <li class="footer-nav-links"><a href="about.html"  class="active">About</a></li>
+                                <li class="footer-nav-links"><a href="services.html">Services</a></li>
+                                <li class="footer-nav-links"><a href="career.html">Career</a></li>
+                                <li class="footer-nav-links"><a href="blog.html">Blog</a></li>
+                                <li class="footer-nav-links"><a href="contact-us.html">Contact</a></li>
+                            </ul>
+
+                            <div class="social-links d-flex">
+                                <a href="#"><img src="images/insta-icon.png" alt="Trevanta on Instagram"></a>
+                                <a href="#"><img src="images/facebook-icon.png" alt="Trevanta on Facebook"></a>
+                                <a href="#"><img src="images/twitter-icon.png" alt="Trevanta on Twitter"></a>
+
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+    <script>
+                /* Open */
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+  document.body.style.cssText = "   overflow-y: hidden;"
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+  document.body.style.cssText = "   overflow-y: auto;"
+}
+    </script>
+</body>
+</html>

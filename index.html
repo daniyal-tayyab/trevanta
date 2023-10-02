@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS -->
+
+    <link rel="stylesheet" href="packages/aos.css">
+    <script src="packages/aos.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathPlugin.min.js"></script>
+    <title></title>
+</head>
+
+<body>
+
+    <section class="header-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 d-flex align-items-center header-navbar">
+                    <div class="social-links d-flex">
+                        <a href="#"><img src="images/insta-icon.png" alt="Trevanta on Instagram"></a>
+                        <a href="#"><img src="images/facebook-icon.png" alt="Trevanta on Facebook"></a>
+                        <a href="#"><img src="images/twitter-icon.png" alt="Trevanta on Twitter"></a>
+
+                    </div>
+                    <div class="navbar-logo d-flex align-items-center">
+                        <img src="images/Trevanta-Logo-1.png" alt="">
+                        <img src="images/Trevanta-Logo-2.png" alt="">
+                    </div>
+
+                    <button class="nav-toggle-btn" onclick="openNav()">
+                        <img src="images/toggle-btn.png" alt="Toggle Menu">
+                    </button>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="#">Home</a>
+                <a href="#">About us</a>
+                <a href="#">Services</a>
+                <a href="#">Careers</a>
+                <a href="#">Blogs</a>
+                <a href="#">Contact us</a>
+                <!-- <div class="nav-first-svg"></div>
+      <div class="nav-second-svg"></div> -->
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </section>
+    <section class="hero-section">
+        <div class="video-background">
+            <!-- The video container -->
+            <div class="video-background__inner">
+                <video autoplay loop muted="true" preload="metadata" class="video-background__video"
+                    src="sample.mp4">...</video>
+                <!-- <iframe class="video-background__video" src="https://archive.org/embed/SampleVideo1280x7201mb" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe> -->
+            </div>
+
+            <!-- The content -->
+            <div class="video-background__content">
+                <section class="hero-wrapper">
+                    <h2 class="hero-welcome">WELCOME</h2>
+                    <h3 class="v-trevanta d-flex flex-column">WE ARE TREVANTA</h3>
+                    <article>
+                        <h1 class="hero-main-txt">Costumize Solutions to transform digitization for the new age of
+                            technology</h1>
+                        <a href="#" class="link">Know More</a>
+                    </article>
+                </section>
+            </div>
+
+            <!-- <div class="trevanta-overlay">
+                <h1>Trevanta</h1>
+              </div> -->
+        </div>
+        <div class="container d-none">
+            <div class="row">
+                <div class="col-12">
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-us-section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-4 left-img" data-aos="fade-right">
+                    <img src="images/about.png" alt="">
+                </div>
+                <div class="col-6">
+                    <h2>ABOUT US</h2>
+                    <article class="about-us-article">
+                        <p class="nugget">" Redefining the Future with <span>Creativity</span>, <span>Passion</span>,
+                            and <span>Integrity</span>"
+                        </p>
+                        <p class="simple-para"> Here at Trevanta Technology, As a leading technology company, we are
+                            dedicated to fostering
+                            innovation and providing safe, clever, and long-lasting IT solutions to companies of all
+                            sizes.
+                            Our goal is to change how businesses function in the quickly changing digital environment of
+                            today.</p>
+
+                        <a href="about-trevanta.html" class="link" data-aos="flip-down">Learn More</a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="professional-services-section">
+        <div class="container">
+            <div class="col-md-12">
+                <h2 data-aos="zoom-in-up">OUR PROFESSIONAL SERVICES</h2>
+                <article class="services-cards d-flex justify-center" data-aos="fade-right">
+
+                    <div class="service-card">
+                        <img src="images/it-consulting.png" alt="IT Consulting Services">
+                        <div class="card">
+                            <h3 class="one-liner">IT Consulting</h3>
+                            <p class="card-text">IT Road Map for Seamless Experiences, Skyward Bound: A Cloud Migration
+                                Excellence, Digitopia: Empowering Change through Digital Transformation"</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="images/software-dev.png" alt="Software Development Services">
+                        <div class="card">
+                            <h3>Software Development</h3>
+                            <p class="card-text">"eCommerce Elevation: Building a Thriving Online Marketplace, Mobile
+                                Marvels: Crafting an App-tastic Experience"</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="images/managed-it-services.png" alt="Managed IT Services">
+                        <div class="card">
+                            <h3>Managed IT Services</h3>
+                            <p class="card-text">Proactive Monitoring: "Beyond Watchful Eyes: Mastering Proactive
+                                Monitoring"</p>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <img src="images/cyber-security.png" alt="Cyber Security Services">
+                        <div class="card">
+                            <h3 class="one-liner">CyberSecurity</h3>
+                            <p class="card-text">"Fortress Shield: Multi-Layered Protection Strategies Unleashed"</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="why-choose-us">
+        <h2 class="text-center" data-aos="zoom-in-up">WHY CHOOSE US</h2>
+
+        <div class="sub-section d-flex justify-content-center">
+            <article class="left">
+                <div class="why-card" data-aos="fade-up-right">
+                    <img src="images/client_centeric.png" alt="Client-Centeric Approach">
+                    <h3>Client-centric approach</h3>
+                    <p class="card-text">We build lasting partnerships, understanding your business requirements to
+                        deliver results aligned with your goals.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up-right">
+                    <img src="images/customized-solutions.png" alt="Customized solutions">
+                    <h3>Customized Solutions</h3>
+                    <p class="card-text">Tailored to your needs, our team develops solutions that address your
+                        challenges and help you achieve objectives.</p>
+                </div>
+            </article>
+            <div class="separation" data-aos="flip-up"><img src="images/why-us-separator.png" alt=""></div>
+            <article class="right">
+                <div class="why-card" data-aos="fade-down-left">
+                    <img src="images/experise.png" alt="Expertise">
+                    <h3>Expertise</h3>
+                    <p class="card-text">Our skilled professionals have industry knowledge and expertise in the latest
+                        technologies, providing innovative solutions that adapt to the changing IT landscape.</p>
+                </div>
+                <div class="why-card" data-aos="fade-down-left">
+                    <img src="images/quality-reliability.png" alt="Quality and Reliability">
+                    <h3>Quality and reliability</h3>
+                    <p class="card-text">We deliver top-notch, scalable, and secure solutions, exceeding client
+                        expectations through rigorous quality assurance processes.</p>
+                </div>
+                <div class="why-card" data-aos="fade-down-left">
+                    <img src="images/client-satisfaction.png" alt="Client Satisfaction">
+                    <h3>Client Satisfaction</h3>
+                    <p class="card-text">Our ultimate goal is your satisfaction. We build trust and become your trusted
+                        technology partner, measuring success by your success.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="our-partners">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 position-relative">
+
+                    <h2 class="text-center" data-aos="zoom-in-up">OUR PARTNERS</h2>
+                    <div class="d-flex">
+
+                        <article class="partners-slider carousel " data-flickity='{ "autoPlay": true }'>
+                            <img src="images/partners-1.png" class="carousel-cell"
+                                alt="Partners of  Trevanat Technology">
+                            <img src="images/partners-1.png" class="carousel-cell"
+                                alt="Partners of  Trevanat Technology">
+                        </article>
+
+
+                        <article class="partners-intro  position-absolute">
+                            <img src="images/partners-4Dee-technologies.png" alt="4Dee Technologies">
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="footer">
+        <footer>
+            <div class="container">
+                <div class="row justify-center">
+                    <div class="col-12">
+                        <img src="images/footer-logo.png" alt="Logo of Traventa Technology">
+
+                        <article class="footer-nav d-flex flex-column">
+                            <p>2023 Trevanta. All rights reserved</p>
+                            <ul class="d-flex justify-content-center">
+                                <li class="footer-nav-links"><a href="index.html" class="active">Home</a></li>
+                                <li class="footer-nav-links"><a href="about-trevanta.html">About</a></li>
+                                <li class="footer-nav-links"><a href="services.html">Services</a></li>
+                                <li class="footer-nav-links"><a href="career.html">Career</a></li>
+                                <li class="footer-nav-links"><a href="blog.html">Blog</a></li>
+                                <li class="footer-nav-links"><a href="contact-us.html">Contact</a></li>
+                            </ul>
+
+                            <div class="social-links d-flex">
+                                <a href="#"><img src="images/insta-icon.png" alt="Trevanta on Instagram"></a>
+                                <a href="#"><img src="images/facebook-icon.png" alt="Trevanta on Facebook"></a>
+                                <a href="#"><img src="images/twitter-icon.png" alt="Trevanta on Twitter"></a>
+
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="packages/flickity-min.css"></script>
+    <script src="packages/flickity-min.js"></script>
+    <!-- GSAP -->
+    <script>
+        gsap.registerPlugin(MotionPathPlugin);
+
+
+        // Menu -- Overlay
+
+        /* Open */
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+            document.body.style.cssText = "   overflow-y: hidden;"
+        }
+
+        /* Close */
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+            document.body.style.cssText = "   overflow-y: auto;"
+        }
+    </script>
+
+    <script>
+        const zoomElement = document.querySelector(".trevanta-overlay");
+        const welcomeText = document.querySelector(".hero-welcome");
+        let zoom = 1;
+        const ZOOM_SPEED = 0.1;
+        const Opacity_SPEED = 0.01;
+        let opacity = 1;
+
+        document.addEventListener("wheel", function (e) {
+
+            if (e.deltaY > 0) {
+
+                zoomElement.style.transform = `scale(${(zoom += ZOOM_SPEED)})`;
+                opacity -= Opacity_SPEED;
+                zoomElement.style.opacity = opacity;
+                if (opacity >= 0) {
+                    document.body.classList.add("disabled");
+                }
+                else {
+
+                    document.body.classList.remove("disabled");
+                    zoomElement.remove();
+
+                    welcomeText.style.transform = `translateY(0px)`
+
+
+
+                }
+
+            }
+
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
