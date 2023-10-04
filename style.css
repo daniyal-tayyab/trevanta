@@ -175,6 +175,11 @@ section .container {
     width: 100%;
 }
 
+a, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 /*----------------------------- About Us Section----------------------------- */
 
 .about-us-article .nugget {
