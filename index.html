@@ -20,10 +20,9 @@
 
     <link rel="stylesheet" href="packages/aos.css">
     <script src="packages/aos.js"></script>
-    <!-- GSAP -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathPlugin.min.js"></script> -->
 
+
+    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
         integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -31,6 +30,8 @@
         integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+        <!-- Main Js -->
+    <script src="main.js"></script>
     <title></title>
 </head>
 
@@ -40,7 +41,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 d-flex align-items-center header-navbar">
-                    <div class="social-links d-flex">
+                    <div class="social-links ">
                         <a href="#"><img src="images/insta-icon.png" alt="Trevanta on Instagram"></a>
                         <a href="#"><img src="images/facebook-icon.png" alt="Trevanta on Facebook"></a>
                         <a href="#"><img src="images/twitter-icon.png" alt="Trevanta on Twitter"></a>
@@ -70,35 +71,23 @@
 
             <!-- Overlay content -->
             <div class="overlay-content">
-                <a href="#">Home</a>
-                <a href="#">About us</a>
-                <a href="#">Services</a>
-                <a href="#">Careers</a>
-                <a href="#">Blogs</a>
-                <a href="#">Contact us</a>
-                <!-- <div class="nav-first-svg"></div>
-      <div class="nav-second-svg"></div> -->
-
-
+                <a href="index.html">Home</a>
+                <a href="about-trevanta.html">About us</a>
+                <a href="services.html">Services</a>
+                <a href="career.html">Careers</a>
+                <a href="blog.html">Blogs</a>
+                <a href="contact.html">Contact us</a>
             </div>
-
-
-
-
-
-
-
         </div>
-
-
-
     </section>
+
     <section class="hero-section">
         <div class="video-background">
             <!-- The video container -->
             <div class="video-background__inner">
-                <video autoplay loop muted="true" preload="metadata" class="video-background__video"
-                    src="sample.mp4">...</video>
+                <!-- <video autoplay loop muted="true" preload="metadata" class="video-background__video"
+                    src="sample.mp4">...</video> -->
+                    <img class="video-background__inner" src="./images/hero-gif.gif" alt="gif"/>
                 <!-- <iframe class="video-background__video" src="https://archive.org/embed/SampleVideo1280x7201mb" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe> -->
 
 
@@ -110,7 +99,11 @@
 
 
                     <h2 class="hero-welcome">WELCOME</h2>
-                    <h3 class="v-trevanta d-flex flex-column">WE ARE TREVANTA</h3>
+                    <h3 class="v-trevanta d-flex ">
+                        <p>WE</p>
+                        <p>ARE</p>
+                        <p>TREVANTA</p>
+                    </h3>
                     <article class="hero-text-section">
                         <h1 class="hero-main-txt">Costumize Solutions to transform digitization for the new age of
                             technology</h1>
@@ -122,7 +115,7 @@
             </div>
 
             <div class="trevanta-overlay">
-                <h1>Trevanta</h1>
+                Trevanta
             </div>
         </div>
         <div class="container d-none">
@@ -260,7 +253,7 @@
                 <div class="col-12 position-relative">
 
                     <h2 class="text-center" data-aos="zoom-in-up">OUR PARTNERS</h2>
-                    <div class="d-flex">
+                    <div class="d-flex partners-article-wrapper">
 
                         <article class="partners-slider carousel " data-flickity='{ "autoPlay": true }'>
                             <img src="images/partners-1.png" class="carousel-cell"
@@ -270,7 +263,7 @@
                         </article>
 
 
-                        <article class="partners-intro  position-absolute">
+                        <article class="partners-intro ">
                             <img src="images/partners-4Dee-technologies.png" alt="4Dee Technologies">
                         </article>
                     </div>
@@ -292,17 +285,19 @@
                                 <li class="footer-nav-links"><a href="index.html" class="active">Home</a></li>
                                 <li class="footer-nav-links"><a href="about-trevanta.html">About</a></li>
                                 <li class="footer-nav-links"><a href="services.html">Services</a></li>
-                                <li class="footer-nav-links"><a href="career.html">Career</a></li>
+                                <li class="footer-nav-links"><a href="careers.html">Career</a></li>
                                 <li class="footer-nav-links"><a href="blog.html">Blog</a></li>
-                                <li class="footer-nav-links"><a href="contact-us.html">Contact</a></li>
+                                <li class="footer-nav-links"><a href="contact.html">Contact</a></li>
                             </ul>
 
                             <div class="social-links d-flex">
                                 <a href="#"><img src="images/insta-icon.png" alt="Trevanta on Instagram"></a>
                                 <a href="#"><img src="images/facebook-icon.png" alt="Trevanta on Facebook"></a>
                                 <a href="#"><img src="images/twitter-icon.png" alt="Trevanta on Twitter"></a>
+
                             </div>
                         </article>
+
                     </div>
                 </div>
             </div>
@@ -316,57 +311,13 @@
     <script src="packages/flickity-min.js"></script>
     <!-- GSAP -->
     <script>
-        gsap.registerPlugin(MotionPathPlugin);
 
 
         // Menu -- Overlay
 
-        /* Open */
-        function openNav() {
-            document.getElementById("myNav").style.height = "100%";
-            document.body.style.cssText = "   overflow-y: hidden;"
-        }
-
-        /* Close */
-        function closeNav() {
-            document.getElementById("myNav").style.height = "0%";
-            document.body.style.cssText = "   overflow-y: auto;"
-        }
     </script>
 
-    <!-- <script>
-        const zoomElement = document.querySelector(".trevanta-overlay");
-        const welcomeText = document.querySelector(".hero-welcome");
-let zoom = 1;
-const ZOOM_SPEED = 0.1;
-const Opacity_SPEED = 0.01;
-let opacity = 1;
 
-document.addEventListener("wheel", function (e) {
-    
-  if (e.deltaY > 0) {
-
-    zoomElement.style.transform = `scale(${(zoom += ZOOM_SPEED)})`;
-    opacity -= Opacity_SPEED;
-    zoomElement.style.opacity = opacity;
-    if (opacity >= 0) {
-          document.body.classList.add("disabled");
-        }
-    else{
-       
-        document.body.classList.remove("disabled");
-        zoomElement.remove();
-
-        welcomeText.style.transform = `translateY(0px)`
-
-
-
-    }
-
-  } 
-   
-});
-    </script> -->
     <script>
         AOS.init();
     </script>
@@ -415,7 +366,7 @@ document.addEventListener("wheel", function (e) {
         gsap.registerPlugin(ScrollTrigger)
 
         gsap.from(".fake-underline", {
-            duration: 3, x: "100vw", rotation: 270, ease: "linear",
+            duration: 1, x: "100vw", rotation: 270, ease: "linear",
             scrollTrigger: {
                 trigger: ".fake-underline",
                 //   markers:true,
@@ -431,6 +382,21 @@ document.addEventListener("wheel", function (e) {
 
 
     </script>
+
+<script>
+    AOS.init();
+    /* Open */
+function openNav() {
+document.getElementById("myNav").style.height = "100%";
+document.body.style.cssText = "   overflow-y: hidden;"
+}
+
+/* Close */
+function closeNav() {
+document.getElementById("myNav").style.height = "0%";
+document.body.style.cssText = "   overflow-y: auto;"
+}
+</script>
 </body>
 
 </html>
