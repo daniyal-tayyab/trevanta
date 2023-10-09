@@ -139,7 +139,7 @@
                                 <li class="footer-nav-links"><a href="index.html" class="active">Home</a></li>
                                 <li class="footer-nav-links"><a href="about-trevanta.html">About</a></li>
                                 <li class="footer-nav-links"><a href="services.html">Services</a></li>
-                                <li class="footer-nav-links"><a href="careers.html">Career</a></li>
+                                <li class="footer-nav-links"><a href="career.html">Career</a></li>
                                 <li class="footer-nav-links"><a href="blog.html">Blog</a></li>
                                 <li class="footer-nav-links"><a href="contact.html">Contact</a></li>
                             </ul>
@@ -266,10 +266,19 @@
             emailjs.send('service_ofnmdja', 'template_xhkqyiw', params)
                 .then(function() {
                     console.log('SUCCESS!');
+                    alert("Message sent!");
+                    reset();
                 }, function(error) {
                     console.log('FAILED...', error);
                 });
         });
+        function reset() {
+            first_name.innerHTML("");
+            last_name.innerHTML("");
+            email.innerHTML("");
+            phone.innerHTML("");
+            message.innerHTML("");
+        }
     </script>
 </body>
 </html>

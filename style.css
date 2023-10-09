@@ -2022,6 +2022,7 @@ body {
     padding: 14px 220px 14px 20px;
     font-size: 18px;
     color: var(--primary-text-color);
+    padding-right: 0;
   }
   #phone {
     width: 100%;

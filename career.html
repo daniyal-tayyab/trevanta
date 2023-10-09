@@ -154,7 +154,7 @@
                                 <li class="footer-nav-links"><a href="index.html" class="active">Home</a></li>
                                 <li class="footer-nav-links"><a href="about-trevanta.html">About</a></li>
                                 <li class="footer-nav-links"><a href="services.html">Services</a></li>
-                                <li class="footer-nav-links"><a href="careers.html">Career</a></li>
+                                <li class="footer-nav-links"><a href="career.html">Career</a></li>
                                 <li class="footer-nav-links"><a href="blog.html">Blog</a></li>
                                 <li class="footer-nav-links"><a href="contact.html">Contact</a></li>
                             </ul>
@@ -305,6 +305,7 @@
             emailjs.send('service_d3xm2w2', 'template_4psabl9', params)
                 .then(function() {
                     console.log('SUCCESS!');
+                    alert("Message sent!");
                 }, function(error) {
                     console.log('FAILED...', error);
                 });
