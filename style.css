@@ -180,6 +180,19 @@ section .container {
     width: 100%;
 }
 
+body.landing-page{
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
+ 
+    scroll-snap-type: y mandatory;
+
+}
+.sections{
+    scroll-snap-align: center;
+    background-color: var(--global-bg-color);
+    
+}
+
 /*----------------------------- About Us Section----------------------------- */
 
 .about-us-article .nugget {
@@ -210,6 +223,7 @@ section .container {
     background-image: url(images/about-us-bottom.png);
     background-position: bottom right;
     background-repeat: no-repeat;
+    background-color: var(--global-bg-color);
 }
 
 .about-us-section .left-img {
@@ -416,6 +430,7 @@ section .container {
 
 .professional-services-section {
     padding-block: 135px 113px;
+    background-color: var(--global-bg-color);
 }
 
 .professional-services-section h2 {
@@ -634,6 +649,7 @@ section .container {
     width: 100%;
     margin-inline: auto;
     padding-block: 135px 151px;
+    background-color: var(--global-bg-color);
 }
 
 /*---------------------------------- Footer------------------------------ */
@@ -760,6 +776,7 @@ footer {
 .our-partners {
     padding-block: 147px 193px;
     padding-inline: 80px;
+    background-color: var(--global-bg-color);
 }
 
 .our-partners h2 {
@@ -798,11 +815,12 @@ footer {
 .hero-section {
     height: calc(100vh - 97px);
     max-height: calc(100vh - 97px);
+    overflow-y: hidden;
 
 }
 
 .hero-welcome {
-    /* writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
     text-decoration: none;
     font-family: var(--primary-font-family);
     font-size: 95px;
@@ -811,33 +829,17 @@ footer {
     letter-spacing: 0em;
     text-align: center;
     opacity: 0.3;
-    color: #fff !important; */
-
-    writing-mode: vertical-rl;
-    text-decoration: none;
-    font-family: var(--primary-font-family);
-    font-size: 67px;
-    font-weight: 700;
-    line-height: 109px;
-    letter-spacing: 0em;
-    text-align: start;
-    opacity: 0.3;
-    color: #fff !important;
-    /* transform: translateY(-40rem); */
-    will-change: transform;
-    transition: transform 1s ease-out;
-    /* z-index: -1;
 
     /* Being Commented for this commit */
     /* transform: translateY(-40rem); */
     will-change: transform;
     transition: transform 1s ease-out;
-    /* z-index: -1; */
+    z-index: -1;
 }
 
 .hero-main-txt {
     font-family: var(--primary-font-family);
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 700;
     line-height: 57px;
     letter-spacing: 0em;
@@ -861,11 +863,10 @@ footer {
 .trevanta-hero-logo {
     display: block;
     margin-inline: auto;
-    width: 158px;
 }
 
 .v-trevanta {
-    /* writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
     text-orientation: upright;
     padding: 8px 20px 12px 18px;
     background-color: var(--primary-color);
@@ -880,21 +881,6 @@ footer {
 
     justify-content: center;
 
-    gap: 1rem; */
-    height: 336px;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    padding: 8px 20px 12px 18px;
-    background-color: var(--primary-color);
-    font-family: var(--primary-font-family);
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 29px;
-    letter-spacing: 1px;
-    text-align: center;
-    color: white;
-    margin-block: 8px 32px;
-    justify-content: center;
     gap: 1rem;
 
 }
@@ -906,8 +892,6 @@ footer {
     width: 100%;
 
     max-width: 1050px;
-    height: 100%;
-    padding-top: 60px;
 }
 
 
@@ -924,6 +908,8 @@ footer {
     /* Used to position the video and content */
     position: relative;
     height: 100%;
+
+
 }
 
 .video-background__inner {
@@ -1316,7 +1302,7 @@ body {
     }
 
     .hero-main-txt {
-        /* font-size: 2.7rem; */
+        font-size: 2.7rem;
     }
 
 
@@ -1446,7 +1432,7 @@ body {
 
 @media screen and (max-width:767px) {
     .hero-welcome {
-        /* font-size: 3rem */
+        font-size: 3rem
     }
 
     .v-trevanta {
@@ -1542,7 +1528,9 @@ body {
 
 
 @media screen and (max-width:440px) {
-    .about-us-desc p{font-size: 20px;}
+
+
+    .about-us-desc p{font-size: 20px;line-height: 1.8rem;}
 
     .name-designation .name{
         font-size: 22px;
@@ -1569,12 +1557,10 @@ body {
         writing-mode: unset;
         display: block;
         padding: 8px 12px;
-        height: max-content;
     }
 
     .hero-welcome {
         line-height: 60px;
-        text-align: center;
     }
 
     .hero-wrapper {
@@ -1678,6 +1664,8 @@ body {
     }
 
 }
+
+
 
 
 

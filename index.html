@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" href="packages/aos.css">
     <script src="packages/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.26/bundled/lenis.min.js"></script> 
 
 
     <!-- GSAP -->
@@ -30,12 +31,12 @@
         integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <!-- Main Js -->
+    <!-- Main Js -->
     <script src="main.js"></script>
     <title></title>
 </head>
 
-<body>
+<body class="landing-page">
 
     <section class="header-nav">
         <div class="container">
@@ -74,20 +75,32 @@
                 <a href="index.html">Home</a>
                 <a href="about-trevanta.html">About us</a>
                 <a href="services.html">Services</a>
-                <a href="career.html">Careers</a>
+                <a href="careers.html">Careers</a>
                 <a href="blog.html">Blogs</a>
-                <a href="contact.html">Contact us</a>
-            </div>
-        </div>
-    </section>
+                <a href="#">Contact us</a>
+                <!-- <div class="nav-first-svg"></div>
+      <div class="nav-second-svg"></div> -->
 
-    <section class="hero-section">
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </section>
+    <section data-speed="0.5" class="hero-section ">
         <div class="video-background">
             <!-- The video container -->
             <div class="video-background__inner">
-                <!-- <video autoplay loop muted="true" preload="metadata" class="video-background__video"
-                    src="sample.mp4">...</video> -->
-                    <img class="video-background__inner" src="./images/hero-gif.gif" alt="gif"/>
+                <video autoplay loop muted="true" preload="metadata" class="video-background__video"
+                    src="sample.mp4">...</video>
                 <!-- <iframe class="video-background__video" src="https://archive.org/embed/SampleVideo1280x7201mb" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe> -->
 
 
@@ -127,7 +140,7 @@
             </div>
         </div>
     </section>
-    <section class="about-us-section">
+    <section  data-speed="1" class="about-us-section sections">
         <div class="container">
             <div class="row">
 
@@ -161,12 +174,13 @@
             </div>
         </div>
     </section>
-    <section class="professional-services-section">
+    <section class="professional-services-section sections">
 
         <div class="container">
             <div class="col-md-12">
                 <h2 data-aos="zoom-in-up">OUR PROFESSIONAL SERVICES</h2>
-                <article class="services-cards d-flex justify-center" data-aos="fade-right" data-aos-offset="200">
+                <!-- data-aos="fade-right" data-aos-offset="200" -->
+                <article class="services-cards d-flex justify-center" >
 
                     <div class="service-card">
                         <img src="images/it-consulting.png" alt="IT Consulting Services">
@@ -206,7 +220,7 @@
             </div>
         </div>
     </section>
-    <section class="why-choose-us">
+    <section class="why-choose-us sections">
         <h2 class="text-center" data-aos="zoom-in-up">WHY CHOOSE US</h2>
 
         <div class="sub-section d-flex justify-content-center">
@@ -247,7 +261,7 @@
             </article>
         </div>
     </section>
-    <section class="our-partners">
+    <section class="our-partners sections">
         <div class="container">
             <div class="row">
                 <div class="col-12 position-relative">
@@ -255,16 +269,23 @@
                     <h2 class="text-center" data-aos="zoom-in-up">OUR PARTNERS</h2>
                     <div class="d-flex partners-article-wrapper">
 
-                        <article class="partners-slider carousel " data-flickity='{ "autoPlay": true }'>
+                        <article class="partners-slider carousel " data-flickity='{ "autoPlay": false }'>
                             <img src="images/partners-1.png" class="carousel-cell"
                                 alt="Partners of  Trevanat Technology">
-                            <img src="images/partners-1.png" class="carousel-cell"
+                            <img src="images/eco-tendance-img.png" class="carousel-cell"
+                                alt="Partners of  Trevanat Technology">
+                            <img src="images/ideators-lab-img.png" class="carousel-cell"
+                                alt="Partners of  Trevanat Technology">
+                            <img src="images/top-nepal-img.png" class="carousel-cell"
                                 alt="Partners of  Trevanat Technology">
                         </article>
 
 
-                        <article class="partners-intro ">
+                        <article class="partners-intro">
                             <img src="images/partners-4Dee-technologies.png" alt="4Dee Technologies">
+                            <!-- <img src="images/ECO-TENDANCE-txt.png" alt="">
+                            <img src="images/IDEATORS LAB-txt.png" alt="">
+                            <img src="images/TOP NEPAL’S INTERNATIONAL Pvt Ltd-txt.png" alt=""> -->
                         </article>
                     </div>
                 </div>
@@ -285,9 +306,9 @@
                                 <li class="footer-nav-links"><a href="index.html" class="active">Home</a></li>
                                 <li class="footer-nav-links"><a href="about-trevanta.html">About</a></li>
                                 <li class="footer-nav-links"><a href="services.html">Services</a></li>
-                                <li class="footer-nav-links"><a href="career.html">Career</a></li>
+                                <li class="footer-nav-links"><a href="careers.html">Career</a></li>
                                 <li class="footer-nav-links"><a href="blog.html">Blog</a></li>
-                                <li class="footer-nav-links"><a href="contact.html">Contact</a></li>
+                                <li class="footer-nav-links"><a href="contact-us.html">Contact</a></li>
                             </ul>
 
                             <div class="social-links d-flex">
@@ -379,24 +400,64 @@
             }
         })
 
+    </script>
 
+    <script>
+        AOS.init();
+        /* Open */
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+            document.body.style.cssText = "   overflow-y: hidden;"
+        }
 
+        /* Close */
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+            document.body.style.cssText = "overflow-y: auto;"
+        }
     </script>
 
 <script>
-    AOS.init();
-    /* Open */
-function openNav() {
-document.getElementById("myNav").style.height = "100%";
-document.body.style.cssText = "   overflow-y: hidden;"
-}
+    
 
-/* Close */
-function closeNav() {
-document.getElementById("myNav").style.height = "0%";
-document.body.style.cssText = "   overflow-y: auto;"
-}
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to("[data-speed]", {
+    y: (i, el) => (1 - parseFloat(el.getAttribute("data-speed"))) * ScrollTrigger.maxScroll(window),
+    ease: "none",
+    scrollTrigger: {
+        start: 0,
+        end: "max",
+        invalidateOnRefresh: true,
+        scrub: 0
+    }
+});
 </script>
+
+
+<!-- Services Cards -->
+<script>
+
+gsap.registerPlugin(ScrollTrigger)
+
+gsap.from(".services-cards", {
+    duration: 1, x: "-100vw", ease: "linear",
+    scrollTrigger: {
+        trigger: ".services-cards",
+        //   markers:true,
+        start: "top 75%", //when top of herman passes 75% viewport height
+        end: "bottom 25%", //when bottom of herman passes 25% viewport height
+
+        //events: onEnter onLeave onEnterBack onLeaveBack
+        toggleActions: "restart complete reverse reset"
+        //options: play, pause, resume, reset, restart, complete, reverse,none
+    }
+})
+</script>
+
+
+
+
 </body>
 
 </html>
