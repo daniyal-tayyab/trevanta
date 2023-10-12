@@ -21,11 +21,17 @@
     <link rel="stylesheet" href="packages/aos.css">
     <script src="packages/aos.js"></script>
     <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathPlugin.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-            <!-- Main Js -->
-            <script src="main.js"></script>
+    <!-- Main Js -->
+    <script src="main.js"></script>
+
 
 
     <title></title>
@@ -37,9 +43,9 @@
             <div class="row">
                 <div class="col-lg-12 d-flex align-items-center header-navbar">
                     <div class="social-links ">
-                        <a href="#"><img src="images/insta-icon.png" alt="Trevanta on Instagram"></a>
-                        <a href="#"><img src="images/facebook-icon.png" alt="Trevanta on Facebook"></a>
-                        <a href="#"><img src="images/twitter-icon.png" alt="Trevanta on Twitter"></a>
+                        <a href="https://instagram.com/trevanta.ae?igshid=MzRlODBiNWFlZA==" target="_blank"><img src="images/insta-icon.png" alt="Trevanta on Instagram"></a>
+                        <a href="https://www.linkedin.com/company/trevanta-technology/" target="_blank"><img src="images/facebook-icon.png" alt="Trevanta on Facebook"></a>
+                        <a href="https://twitter.com/trevanta_ae" target="_blank"><img src="images/twitter-icon.png" alt="Trevanta on Twitter"></a>
 
                     </div>
                     <div class="navbar-logo d-flex align-items-center">
@@ -71,32 +77,61 @@
                 <a href="services.html">Services</a>
                 <a href="career.html">Careers</a>
                 <a href="blog.html">Blogs</a>
-                <a href="contact.html">Contact us</a>
+                <a href="#">Contact us</a>
+                <!-- <div class="nav-first-svg"></div>
+      <div class="nav-second-svg"></div> -->
+
+
             </div>
+
+
+
+
+
+
+
         </div>
+
+
+
     </section>
 
-    <section class="hero-section">
+    <section class="hero-section " data-speed="0.5">
         <div class="video-background">
             <!-- The video container -->
             <div class="video-background__inner">
-                <!-- <video autoplay loop muted="true" preload="metadata" class="video-background__video"
-                    src="sample.mp4"></video> -->
-                    <img class="video-background__video" alt="gif" src="./images/about-gif.gif" />
+                <video autoplay loop muted="true" preload="metadata" class="video-background__video"
+                    src="sample.mp4"></video>
                 <!-- <iframe class="video-background__video" src="https://archive.org/embed/SampleVideo1280x7201mb" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe> -->
             </div>
 
             <!-- The content -->
             <div class="video-background__content">
                 <section class="about-us-hero">
-                
-                        <h1 class="">ABOUT US</h1>
-                        <p class="first-para">Trevanta is a Dubai-based provider of IT solutions working on projects
-                            spanning up to 20 different
-                            sectors. Our areas of expertise include improving user experiences through creative design,
-                            incorporating new technology into the creation of websites and applications, and more.</p>
-                    
-                
+
+                    <h1 class="about-head">ABOUT US</h1>
+                    <p class="first-para">Trevanta is a Dubai-based provider of IT solutions working on projects
+                        spanning up to 20 different
+                        sectors. Our areas of expertise include improving user experiences through creative design,
+                        incorporating new technology into the creation of websites and applications, and more.</p>
+
+                    <!-- <p class="second-para">We want to create a linked ecosystem powered by digitalization and
+                        cutting-edge technologies in order to stand out in a variety of industries. This strategy will
+                        enhance overall offers by giving people and companies a common platform to consolidate their
+                        everyday lives and commercial activities. At the foundation of our mission is inclusivity, which
+                        makes these services available to everyone. We are also committed to enabling start-ups and
+                        small enterprises by reducing barriers in the competitive global market. We are carefully
+                        integrating artificial intelligence as it becomes more popular to automate repetitive tasks and
+                        improve user experiences. By doing this, we may provide a competitive advantage and accommodate
+                        various industry-specific preferences and needs. At Trevanta, we promote a client-centered
+                        culture and assemble a team of highly skilled individuals to maximize potential and achievement.
+                        To assure your success inthe digital era, our startup mentality thrives on innovation, providing
+                        cutting-edge solutions, and utilizing developing technologies. Let's go off on an extraordinary
+                        digital journey together, where Trevanta's global reach and client-centered approach will ensure
+                        your success in the online world.</p> -->
+
+                    <div class="second-para"></div>
+
 
                 </section>
             </div>
@@ -108,24 +143,25 @@
 
     </section>
 
-    <section class="about-us-desc">
+    <!-- <section class="about-us-desc">
 
         <div class="container">
             <div class="row">
-                <div class="col-12" style="overflow: hidden;">
+                <div class="col-12">
                     <p data-aos="flip-right" data-aos-offset="400">We want to create a linked ecosystem powered by digitalization and cutting-edge technologies in order to  stand out in a variety of industries. This strategy will enhance overall offers by giving people and companies a common platform to consolidate their everyday lives and commercial activities. At the foundation of our mission is inclusivity, which makes these services available to everyone. We are also committed to enabling start-ups and small enterprises by reducing barriers in the competitive global market. We are carefully integrating artificial intelligence as it becomes more popular to automate repetitive tasks and improve user experiences. By doing this, we may provide a competitive advantage and accommodate various industry-specific preferences and needs. At Trevanta, we promote a client-centered culture and assemble a team of highly skilled individuals to maximize potential and achievement. To assure your success inthe digital era, our startup mentality thrives on innovation, providing cutting-edge solutions, and utilizing developing technologies. Let's go off on an extraordinary digital journey together, where Trevanta's global reach and client-centered approach will ensure your success in the online world.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
-    <section class="about-us-projects">
+    <section class="about-us-projects sections" data-speed="1">
 
         <div class="container">
-            <section class="d-flex flex-wrap projects-by-trevanta">
-                <article class="project-desc" data-aos="fade-left" data-aos-duration="500" data-aos-offset="400"
-                    data-aos-delay="600">
+            <section id="projects-carousel" class="d-flex  projects-by-trevanta carousels"
+                data-flickity='{ "groupCells": true }'>
+
+                <article class="project-desc carousel-cell">
                     >
                     <img src="images/project-name.png" alt="Projects by Trevanta">
                     <h3>Project Name</h3>
@@ -253,9 +289,7 @@
                     </div>
                 </article>
 
-                <article class="project-desc" data-aos="fade-left" data-aos-duration="500" data-aos-offset="350"
-                    data-aos-delay="450">
-                    >
+                <article class="project-desc carousel-cell">
                     <img src="images/project-excluvio.png" alt="Projects by Trevanta">
                     <h3>Excluvio</h3>
                     <div class="project-social-links">
@@ -388,9 +422,7 @@
                     </div>
                 </article>
 
-                <article class="project-desc" data-aos="fade-left" data-aos-duration="500" data-aos-offset="300"
-                    data-aos-delay="200">
-                    >
+                <article class="project-desc carousel-cell">
                     <img src="images/project-chain-homes.png" alt="Projects by Trevanta">
                     <h3>Chain Homes</h3>
                     <div class="project-social-links">
@@ -524,9 +556,8 @@
                 </article>
 
 
-                <article class="project-desc" data-aos="fade-left" data-aos-duration="500" data-aos-offset="200"
-                    data-aos-delay="50">
-                    >
+                <article class="project-desc carousel-cell">
+
                     <img src="images/project-red-change.png" alt="Projects by Trevanta">
                     <h3>Chain Homes</h3>
                     <div class="project-social-links">
@@ -659,6 +690,9 @@
                     </div>
                 </article>
 
+
+
+
             </section>
         </div>
 
@@ -696,8 +730,8 @@
                         <article class="footer-nav d-flex flex-column">
                             <p>2023 Trevanta. All rights reserved</p>
                             <ul class="d-flex justify-content-center">
-                                <li class="footer-nav-links"><a href="index.html" class="active">Home</a></li>
-                                <li class="footer-nav-links"><a href="about-trevanta.html">About</a></li>
+                                <li class="footer-nav-links"><a href="index.html">Home</a></li>
+                                <li class="footer-nav-links"><a href="about-trevanta.html" class="active">About</a></li>
                                 <li class="footer-nav-links"><a href="services.html">Services</a></li>
                                 <li class="footer-nav-links"><a href="career.html">Career</a></li>
                                 <li class="footer-nav-links"><a href="blog.html">Blog</a></li>
@@ -705,9 +739,9 @@
                             </ul>
 
                             <div class="social-links d-flex">
-                                <a href="#"><img src="images/insta-icon.png" alt="Trevanta on Instagram"></a>
-                                <a href="#"><img src="images/facebook-icon.png" alt="Trevanta on Facebook"></a>
-                                <a href="#"><img src="images/twitter-icon.png" alt="Trevanta on Twitter"></a>
+                                <a href="https://instagram.com/trevanta.ae?igshid=MzRlODBiNWFlZA==" target="_blank"><img src="images/insta-icon.png" alt="Trevanta on Instagram"></a>
+                                <a href="https://www.linkedin.com/company/trevanta-technology/" target="_blank"><img src="images/facebook-icon.png" alt="Trevanta on Facebook"></a>
+                                <a href="https://twitter.com/trevanta_ae" target="_blank"><img src="images/twitter-icon.png" alt="Trevanta on Twitter"></a>
 
                             </div>
                         </article>
@@ -718,7 +752,10 @@
         </footer>
     </section>
 
+    <!-- <script src="packages/flickity-min.css"></script>
+    <script src="packages/flickity-min.js"></script> -->
 
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 
     <script>
         /* Open */
@@ -735,62 +772,133 @@
 
 
 
+    </script>
 
-        // Create a new GSAP timeline
-        const timeline = gsap.timeline();
-
-        // Target the overlay element
-        const overlay = document.querySelector('.trevanta-overlay');
-        const heading = document.querySelector('.about-us-hero h1');
-        const firstPara = document.querySelector('.about-us-hero .first-para');
- 
+    <!-- About Us Hero Section Animation -->
+    <script>
 
 
 
-        // Animation sequence
-        const hero_animation = timeline
-            // .fromTo(overlay, { scale: 1 }, { scale: 3, opacity: 0, duration: 3, ease: Sine.easeInOut })
-            .fromTo(heading, { opacity: 0, }, { opacity: 1, duration: 2 })
-            .fromTo(firstPara, { scale: 0, transformOrigin: 'top center' }, { scale: 1, duration: 1})
-            // .call(emptyFirstPara);
+        document.addEventListener('DOMContentLoaded', function () {
+            const timeline = gsap.timeline();
+
+            // Target the overlay element
+            const heading = document.querySelector('.about-us-hero h1');
+            const firstPara = document.querySelector('.about-us-hero .first-para');
+            const secondPara = document.querySelector('.about-us-hero .second-para');
+            const heroSection = document.querySelector('.about-us-hero');
+
+            // Animation sequence
+            const hero_animation = timeline
+                .from(heading, { y: '-500px', duration: 1.2 })
+                .from(firstPara, { y: '500px', duration: 1.5 });
+
+            // Play the timeline
+            timeline.play();
+
+            gsap.registerPlugin(ScrollTrigger);
 
 
-        // function emptyFirstPara() {
-        //     firstPara.textContent = "";
-        //     firstPara.textContent = "We want to create a linked ecosystem powered by digitalization and cutting-edge technologies in order to  stand out in a variety of industries. This strategy will enhance overall offers by giving people and companies a common platform to consolidate their everyday lives and commercial activities. At the foundation of our mission is inclusivity, which makes these services available to everyone. We are also committed to enabling start-ups and small enterprises by reducing barriers in the competitive global market. We are carefully integrating artificial intelligence as it becomes more popular to automate repetitive tasks and improve user experiences. By doing this, we may provide a competitive advantage and accommodate various industry-specific preferences and needs. At Trevanta, we promote a client-centered culture and assemble a team of highly skilled individuals to maximize potential and achievement. To assure your success inthe digital era, our startup mentality thrives on innovation, providing cutting-edge solutions, and utilizing developing technologies. Let's go off on an extraordinary digital journey together, where Trevanta's global reach and client-centered approach will ensure your success in the online world.";
-        //     gsap.fromTo(firstPara, { opacity:0 }, { opacity: 1, duration: 3 });
-        // }
 
+            // Set the onComplete callback
+            hero_animation.eventCallback('onComplete', () => {
+                // secondPara.textContent = `We want to create a linked ecosystem powered by digitalization and cutting-edge technologies in order to stand out in a variety of industries. This strategy will enhance overall offers by giving people and companies a common platform to consolidate their everyday lives and commercial activities. At the foundation of our mission is inclusivity, which makes these services available to everyone. We are also committed to enabling start-ups and small enterprises by reducing barriers in the competitive global market. We are carefully integrating artificial intelligence as it becomes more popular to automate repetitive tasks and improve user experiences. By doing this, we may provide a competitive advantage and accommodate various industry-specific preferences and needs. At Trevanta, we promote a client-centered culture and assemble a team of highly skilled individuals to maximize potential and achievement. To assure your success in the digital era, our startup mentality thrives on innovation, providing cutting-edge solutions, and utilizing developing technologies. Let's go off on an extraordinary digital journey together, where Trevanta's global reach and client-centered approach will ensure your success in the online world.`;
 
+                // Use ScrollTrigger to trigger the timeline when the element enters the viewport
+                ScrollTrigger.create({
+                    trigger: heroSection,
+                    start: 'top top',
+                    end: 'bottom bottom',
+                    // animation: gsap.fromTo('.second-para', {
 
-
-        // Play the timeline
-        timeline.play();
-
-
-        // Set the onComplete callback
-        hero_animation.eventCallback('onComplete', () => {
-            // Remove the element from the DOM
-            overlay.parentNode.removeChild(overlay);
+                    //     y: 1000,
+                    // }, {
+                    //     opacity: 1,
+                    //     y: 0,
+                    //     duration: 1,
+                    // }),
+                
+                    onStart: () => {
+                        heading.remove()
+                        firstPara.remove()
+                    }
+                });
+            });
 
         });
 
-   
     </script>
+
     <script>
         AOS.init();
         /* Open */
-function openNav() {
-    document.getElementById("myNav").style.height = "100%";
-    document.body.style.cssText = "   overflow-y: hidden;"
-}
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+            document.body.style.cssText = "   overflow-y: hidden;"
+        }
 
-/* Close */
-function closeNav() {
-    document.getElementById("myNav").style.height = "0%";
-    document.body.style.cssText = "   overflow-y: auto;"
-}
+        /* Close */
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+            document.body.style.cssText = "   overflow-y: auto;"
+        }
     </script>
+
+=
+
+    <!-- <script>
+    const container = document.getElementById('projects-carousel');
+    let currentIndex = 0;
+  
+    function fadeOutAndIn() {
+      const articles = document.querySelectorAll('.project-desc');
+      articles[currentIndex].style.opacity = 0;
+
+      currentIndex = (currentIndex + 1) % articles.length;
+  
+      articles[currentIndex].style.opacity = 1;
+    }
+  
+  
+    setInterval(fadeOutAndIn, 500);
+  </script> -->
+
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+        gsap.from(".projects-by-trevanta", {
+            duration: 1, x: "100vw", ease: "linear",
+            scrollTrigger: {
+                trigger: ".projects-by-trevanta",
+                //   markers:true,
+                start: "top 35%", //when top of herman passes 75% viewport height
+                end: "bottom 25%", //when bottom of herman passes 25% viewport height
+
+                //events: onEnter onLeave onEnterBack onLeaveBack
+                toggleActions: "restart reverse restart none"
+                //options: play, pause, resume, reset, restart, complete, reverse,none
+            }
+        })
+    </script>
+
+<script>
+    
+
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.to("[data-speed]", {
+        y: (i, el) => (1 - parseFloat(el.getAttribute("data-speed"))) * ScrollTrigger.maxScroll(window),
+        ease: "none",
+        scrollTrigger: {
+            start: 0,
+            end: "max",
+            invalidateOnRefresh: true,
+            scrub: 0
+        }
+    });
+    </script>
+
 </body>
+
 
 </html>

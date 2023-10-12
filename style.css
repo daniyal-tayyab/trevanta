@@ -1670,6 +1670,8 @@ body {
 
 
 
+
+
 /* ************************************************************************************************ */
   /* Blogs Page */
   .blogs {
@@ -1705,6 +1707,7 @@ body {
 
 .blog__card__img {
     width: 100%;
+    height: 193px;
     transition: all 3s;
 }
 .blog__card:hover .blog__card__img {
@@ -1933,6 +1936,7 @@ body {
     position: relative;
   }
   .career-hero-content {
+    width: 80%;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -1946,6 +1950,7 @@ body {
     font-size: 28px;
     font-weight: 400;
     margin-top: 20px;
+    width: 100%
   }
   .careers {
     padding-block: 20px;
@@ -2021,14 +2026,14 @@ body {
     border-radius: 8px;
     border: 1px solid #E1F2EC;
     background-color: transparent;
-    padding: 14px 220px 14px 20px;
+    /* padding: 14px 220px 14px 20px; */
     font-size: 18px;
     height: 70px;
     color: var(--primary-text-color);
   }
   .iti__flag-container {
-    right: 0 !important;
-    left: 85% !important;
+    /* right: 0 !important;
+    left: 85% !important; */
   }
   .iti__country {
     color: black;
