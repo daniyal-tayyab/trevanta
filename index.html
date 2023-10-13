@@ -13,15 +13,27 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+   
 
     <!-- AOS -->
 
     <link rel="stylesheet" href="packages/aos.css">
     <script src="packages/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.26/bundled/lenis.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.26/bundled/lenis.min.js"></script>
+    
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+
+            <!-- Slick Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <link rel="stylesheet" href="packages/slick-theme.css"> -->
+    <link rel="stylesheet" href="packages/slick.css">
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
@@ -32,7 +44,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Main Js -->
+   
     <script src="main.js"></script>
+
+      <!-- CSS -->
+      <link rel="stylesheet" href="style.css">
     <title></title>
 </head>
 
@@ -140,7 +156,7 @@
             </div>
         </div>
     </section>
-    <section  data-speed="1" class="about-us-section sections">
+    <section data-speed="1" class="about-us-section sections">
         <div class="container">
             <div class="row">
 
@@ -180,7 +196,7 @@
             <div class="col-md-12">
                 <h2 data-aos="zoom-in-up">OUR PROFESSIONAL SERVICES</h2>
                 <!-- data-aos="fade-right" data-aos-offset="200" -->
-                <article class="services-cards d-flex justify-center" >
+                <article class="services-cards d-flex justify-center">
 
                     <div class="service-card">
                         <img src="images/it-consulting.png" alt="IT Consulting Services">
@@ -269,7 +285,7 @@
                     <h2 class="text-center" data-aos="zoom-in-up">OUR PARTNERS</h2>
                     <div class="d-flex partners-article-wrapper">
 
-                        <article class="partners-slider carousel " data-flickity='{ "autoPlay": false }'>
+                        <article class="partners-slider carousel slider slider-x ">
                             <img src="images/partners-1.png" class="carousel-cell"
                                 alt="Partners of  Trevanat Technology">
                             <img src="images/eco-tendance-img.png" class="carousel-cell"
@@ -281,11 +297,16 @@
                         </article>
 
 
-                        <article class="partners-intro">
-                            <img src="images/partners-4Dee-technologies.png" alt="4Dee Technologies">
-                            <!-- <img src="images/ECO-TENDANCE-txt.png" alt="">
-                            <img src="images/IDEATORS LAB-txt.png" alt="">
-                            <img src="images/TOP NEPAL’S INTERNATIONAL Pvt Ltd-txt.png" alt=""> -->
+                        <article class="partners-intro slider slider-for">
+
+                       
+                         
+                                <div><img src="images/partners-4Dee-technologies.png" alt=""></div>
+                                <div><img src="images/ECO-TENDANCE-txt.png" alt=""></div>
+                                <div><img src="images/IDEATORS LAB-txt.png" alt=""></div>
+                                <div><img src="images/TOP NEPAL’S INTERNATIONAL Pvt Ltd-txt.png" alt=""></div>
+                                
+                        
                         </article>
                     </div>
                 </div>
@@ -330,19 +351,10 @@
     <script src="bootstrap/bootstrap.min.js"></script>
     <script src="packages/flickity-min.css"></script>
     <script src="packages/flickity-min.js"></script>
-    <!-- GSAP -->
-    <script>
-
-
-        // Menu -- Overlay
-
-    </script>
-
-
+  
     <script>
         AOS.init();
     </script>
-
 
     <script>
         // Create a new GSAP timeline
@@ -417,47 +429,60 @@
         }
     </script>
 
-<script>
-    
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.to("[data-speed]", {
-    y: (i, el) => (1 - parseFloat(el.getAttribute("data-speed"))) * ScrollTrigger.maxScroll(window),
-    ease: "none",
-    scrollTrigger: {
-        start: 0,
-        end: "max",
-        invalidateOnRefresh: true,
-        scrub: 0
-    }
-});
-</script>
+    <script>
 
 
-<!-- Services Cards -->
-<script>
+        gsap.registerPlugin(ScrollTrigger);
 
-gsap.registerPlugin(ScrollTrigger)
-
-gsap.from(".services-cards", {
-    duration: 1, x: "-100vw", ease: "linear",
-    scrollTrigger: {
-        trigger: ".services-cards",
-        //   markers:true,
-        start: "top 75%", //when top of herman passes 75% viewport height
-        end: "bottom 25%", //when bottom of herman passes 25% viewport height
-
-        //events: onEnter onLeave onEnterBack onLeaveBack
-        toggleActions: "restart complete reverse reset"
-        //options: play, pause, resume, reset, restart, complete, reverse,none
-    }
-})
-</script>
+        gsap.to("[data-speed]", {
+            y: (i, el) => (1 - parseFloat(el.getAttribute("data-speed"))) * ScrollTrigger.maxScroll(window),
+            ease: "none",
+            scrollTrigger: {
+                start: 0,
+                end: "max",
+                invalidateOnRefresh: true,
+                scrub: 0
+            }
+        });
+    </script>
 
 
+    <!-- Services Cards -->
+    <script>
 
+        gsap.registerPlugin(ScrollTrigger)
 
+        gsap.from(".services-cards", {
+            duration: 1, x: "-100vw", ease: "linear",
+            scrollTrigger: {
+                trigger: ".services-cards",
+                //   markers:true,
+                start: "top 75%", //when top of herman passes 75% viewport height
+                end: "bottom 25%", //when bottom of herman passes 25% viewport height
+
+                //events: onEnter onLeave onEnterBack onLeaveBack
+                toggleActions: "restart complete reverse reset"
+                //options: play, pause, resume, reset, restart, complete, reverse,none
+            }
+        })
+    </script>
+
+    <script>
+          $('.slider-x').slick({
+            arrows: true,
+            asNavFor: '.slider-for',
+            prevArrow: '<button type="button" class="slick-prev">   <img src="images/arrow-prev.png" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"> <img src="images/arrow-next.png" alt=""></button>',
+            centerPadding: '60px',
+        });
+        $('.slider-for').slick({
+            arrows: false,
+            asNavFor: '.slider-x',
+            centerPadding: '60px',
+        });
+      
+       
+    </script>
 </body>
 
 </html>

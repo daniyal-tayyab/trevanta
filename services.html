@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,9 +21,18 @@
 
     <link rel="stylesheet" href="packages/aos.css">
     <script src="packages/aos.js"></script>
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathPlugin.min.js"></script>
+
+       <!-- GSAP -->
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+       integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+       integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<!-- Main Js -->
+    <script src="main.js"></script>
     <title>Services</title>
 </head>
 
@@ -92,12 +102,12 @@
         </div>
     </section>
     <section class="services__list">
-        <article class="service__list-item">
+        <article class="service__list-item section">
             <div class="service__list-item__header">
-                <img src="./images/it-consulting.png" alt="it consultant" />
-                <h2>IT Consulting</h2>
+                <img  src="./images/it-consulting.png" alt="it consultant" />
+                <h2 class="title">IT Consulting</h2>
             </div>
-            <div class="service__list-item__content">
+            <div  class="service__list-item__content paragraph">
                 <p class="service__list-item__content__desc">
                     Trevanta's services are built on IT consulting, which enables organizations to confidently traverse
                     the complex world of technology. Trevanta's IT consulting team is made up of seasoned individuals
@@ -134,12 +144,12 @@
                 </p>
             </div>
         </article>
-        <article class="service__list-item">
+        <article class="service__list-item section">
             <div class="service__list-item__header">
-                <img src="./images/software-dev.png" alt="it consultant" />
-                <h2>Software Development</h2>
+                <img  src="./images/software-dev.png" alt="it consultant" />
+                <h2 class="title" >Software Development</h2>
             </div>
-            <div class="service__list-item__content">
+            <div  class="service__list-item__content paragraph">
                 <p class="service__list-item__content__desc">
                     In today's ever-changing digital environment, organizations must rely on powerful and dependable
                     software solutions to survive. Trevanta Websites provides a variety of software development services
@@ -166,12 +176,12 @@
                 </p>
             </div>
         </article>
-        <article class="service__list-item">
+        <article class="service__list-item section">
             <div class="service__list-item__header">
-                <img src="./images/managed-it-services.png" alt="it consultant" />
-                <h2>IT Management Services</h2>
+                <img data-aos="flip-left" src="./images/managed-it-services.png" alt="it consultant" />
+                <h2  class="title" >IT Management Services</h2>
             </div>
-            <div class="service__list-item__content">
+            <div  class="service__list-item__content paragraph">
                 <p class="service__list-item__content__desc">
                     Businesses must prioritize the administration and maintenance of their technological infrastructure
                     in order to maintain a competitive edge and efficient IT operations. Trevanta Websites provides
@@ -190,12 +200,12 @@
                 </p>
             </div>
         </article>
-        <article class="service__list-item">
+        <article class="service__list-item section">
             <div class="service__list-item__header">
-                <img src="./images/cyber-security.png" alt="it consultant" />
-                <h2>Cybersecurity</h2>
+                <img  src="./images/cyber-security.png" alt="it consultant" />
+                <h2  class="title">Cybersecurity</h2>
             </div>
-            <div class="service__list-item__content">
+            <div class="service__list-item__content paragraph">
                 <p class="service__list-item__content__desc">
                     Cybersecurity has become a non-negotiable part of business operations in an era of increasing cyber
                     threats and data breaches. Trevanta Websites provides comprehensive cybersecurity solutions to
@@ -253,19 +263,75 @@
     <script src="bootstrap/bootstrap.min.js"></script>
     <script src="packages/flickity-min.css"></script>
     <script src="packages/flickity-min.js"></script>
-    <script>
-           /* Open */
-           function openNav() {
-            document.getElementById("myNav").style.height = "100%";
-            document.body.style.cssText = "   overflow-y: hidden;"
-        }
 
-        /* Close */
-        function closeNav() {
-            document.getElementById("myNav").style.height = "0%";
-            document.body.style.cssText = "   overflow-y: auto;"
-        }
+    <script>
+        AOS.init();
+        /* Open */
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+    document.body.style.cssText = "   overflow-y: hidden;"
+}
+
+/* Close */
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+    document.body.style.cssText = "   overflow-y: auto;"
+}
     </script>
+
+
+<script>
+ // Initialize GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+// Loop through each section and create animations and triggers
+const sections = document.querySelectorAll('.section');
+
+sections.forEach((section) => {
+  const title = section.querySelector('.title');
+  const paragraph = section.querySelector('.paragraph');
+
+  const slideInFromRight = gsap.timeline({
+    defaults: {
+      duration: 0.8,
+      ease: "power3.out",
+    },
+  });
+
+  slideInFromRight.from(title, {
+    xPercent: 100,
+    opacity: 0,
+  });
+
+  const slideInFromLeft = gsap.timeline({
+    defaults: {
+      duration: 0.8,
+      ease: "power3.out",
+    },
+  });
+
+  slideInFromLeft.from(paragraph, {
+    xPercent: -100,
+    opacity: 0,
+  });
+
+  ScrollTrigger.create({
+    animation: slideInFromRight,
+    trigger: section,
+    start: "top 80%", // Adjust the start position as per your requirement
+    end: "bottom 20%", // Adjust the end position as per your requirement
+    scrub: true,
+  });
+
+  ScrollTrigger.create({
+    animation: slideInFromLeft,
+    trigger: section,
+    start: "top 80%", // Adjust the start position as per your requirement
+    end: "bottom 20%", // Adjust the end position as per your requirement
+    scrub: true,
+  });
+});
+</script>
 </body>
 
 </html>
