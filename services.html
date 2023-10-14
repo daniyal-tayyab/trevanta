@@ -73,10 +73,10 @@
             <div class="overlay-content">
                 <a href="index.html">Home</a>
                 <a href="about-trevanta.html">About us</a>
-                <a href="services.html">Services</a>
-                <a href="career.html">Careers</a>
+                <a class="active" href="services.html">Services</a>
+                <a href="careers.html">Careers</a>
                 <a href="blog.html">Blogs</a>
-                <a href="#">Contact us</a>
+                <a href="contact.html">Contact us</a>
                 <!-- <div class="nav-first-svg"></div>
       <div class="nav-second-svg"></div> -->
 
@@ -237,9 +237,9 @@
                             <p>2023 Trevanta. All rights reserved</p>
                             <ul class="d-flex justify-content-center">
                                 <li class="footer-nav-links"><a href="index.html">Home</a></li>
-                                <li class="footer-nav-links"><a href="about-trevanta.html" class="active">About</a></li>
-                                <li class="footer-nav-links"><a href="services.html">Services</a></li>
-                                <li class="footer-nav-links"><a href="career.html">Career</a></li>
+                                <li class="footer-nav-links"><a href="about-trevanta.html" >About</a></li>
+                                <li class="footer-nav-links"><a href="services.html" class="active">Services</a></li>
+                                <li class="footer-nav-links"><a href="careers.html">Career</a></li>
                                 <li class="footer-nav-links"><a href="blog.html">Blog</a></li>
                                 <li class="footer-nav-links"><a href="contact.html">Contact</a></li>
                             </ul>
@@ -265,18 +265,18 @@
     <script src="packages/flickity-min.js"></script>
 
     <script>
-        AOS.init();
+     AOS.init();
         /* Open */
-function openNav() {
-    document.getElementById("myNav").style.height = "100%";
-    document.body.style.cssText = "   overflow-y: hidden;"
-}
+        function openNav() {
+            document.getElementById("myNav").style.top = "0vh";
+            document.body.style.cssText = "   overflow-y: hidden;"
+        }
 
-/* Close */
-function closeNav() {
-    document.getElementById("myNav").style.height = "0%";
-    document.body.style.cssText = "   overflow-y: auto;"
-}
+        /* Close */
+        function closeNav() {
+            document.getElementById("myNav").style.top= "-100vh";
+            document.body.style.cssText = "overflow-y: auto;"
+        }
     </script>
 
 

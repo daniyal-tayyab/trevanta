@@ -75,9 +75,9 @@
                 <a href="index.html">Home</a>
                 <a href="about-trevanta.html">About us</a>
                 <a href="services.html">Services</a>
-                <a href="career.html">Careers</a>
+                <a href="careers.html">Careers</a>
                 <a href="blog.html">Blogs</a>
-                <a href="#">Contact us</a>
+                <a class="active" href="contact.html">Contact us</a>
                 <!-- <div class="nav-first-svg"></div>
       <div class="nav-second-svg"></div> -->
 
@@ -152,11 +152,11 @@
                             <p>2023 Trevanta. All rights reserved</p>
                             <ul class="d-flex justify-content-center">
                                 <li class="footer-nav-links"><a href="index.html">Home</a></li>
-                                <li class="footer-nav-links"><a href="about-trevanta.html" class="active">About</a></li>
+                                <li class="footer-nav-links"><a href="about-trevanta.html">About</a></li>
                                 <li class="footer-nav-links"><a href="services.html">Services</a></li>
-                                <li class="footer-nav-links"><a href="career.html">Career</a></li>
+                                <li class="footer-nav-links"><a href="careers.html">Career</a></li>
                                 <li class="footer-nav-links"><a href="blog.html">Blog</a></li>
-                                <li class="footer-nav-links"><a href="contact.html">Contact</a></li>
+                                <li class="footer-nav-links"><a href="contact.html"  class="active">Contact</a></li>
                             </ul>
 
                             <div class="social-links d-flex">
@@ -185,17 +185,20 @@
         })();
     </script>
     <script>
-           /* Open */
-           function openNav() {
-            document.getElementById("myNav").style.height = "100%";
+        
+        AOS.init();
+        /* Open */
+        function openNav() {
+            document.getElementById("myNav").style.top = "0vh";
             document.body.style.cssText = "   overflow-y: hidden;"
         }
 
         /* Close */
         function closeNav() {
-            document.getElementById("myNav").style.height = "0%";
-            document.body.style.cssText = "   overflow-y: auto;"
+            document.getElementById("myNav").style.top= "-100vh";
+            document.body.style.cssText = "overflow-y: auto;"
         }
+    
         const phoneInputField = document.querySelector("#phone");
         const phoneInput = window.intlTelInput(phoneInputField, {
           utilsScript:

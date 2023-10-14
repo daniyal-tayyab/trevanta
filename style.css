@@ -322,14 +322,14 @@ body.landing-page{
 /* The Overlay (background) */
 .overlay {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */
-    height: 0%;
+    height: 100%;
     width: 100%;
     position: fixed;
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
     left: 0;
-    top: 0;
+    top: -100vh;
     background-color: #121B23;
 
     overflow-x: hidden;
@@ -372,6 +372,9 @@ body.landing-page{
     /* text-align: left; */
     text-transform: capitalize;
 
+}
+.overlay-content>a.active{
+color: var(--primary-color);
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -898,6 +901,7 @@ footer {
 .trevanta-hero-logo {
     display: block;
     margin-inline: auto;
+    visibility: hidden;
 }
 
 .v-trevanta {
@@ -1847,6 +1851,7 @@ margin-right: 1.5rem;
     height: 361px;
     flex-shrink: 0;
     margin-bottom: 20px;
+    object-fit: cover;
 }
 
 .single-blog__content {

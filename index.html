@@ -88,10 +88,10 @@
 
             <!-- Overlay content -->
             <div class="overlay-content">
-                <a href="index.html">Home</a>
+                <a class="active" href="index.html">Home</a>
                 <a href="about-trevanta.html">About us</a>
                 <a href="services.html">Services</a>
-                <a href="career.html">Careers</a>
+                <a href="careers.html">Careers</a>
                 <a href="blog.html">Blogs</a>
                 <a href="#">Contact us</a>
                 <!-- <div class="nav-first-svg"></div>
@@ -136,8 +136,8 @@
                     <article class="hero-text-section">
                         <h1 class="hero-main-txt">Costumize Solutions to transform digitization for the new age of
                             technology</h1>
-                        <img src="images/trevanta-hero-logo.png" alt="Trevanta Logo" class="trevanta-hero-logo">
-                        <a href="#" class="link hero-know-more">Know More</a>
+                        <img  src="images/trevanta-hero-logo.png" alt="Trevanta Logo" class="trevanta-hero-logo">
+                        <a href="#about-us" class="link hero-know-more">Know More</a>
                     </article>
 
                 </section>
@@ -147,24 +147,17 @@
                 Trevanta
             </div>
         </div>
-        <div class="container d-none">
-            <div class="row">
-                <div class="col-12">
-
-
-                </div>
-            </div>
-        </div>
+       
     </section>
-    <section data-speed="1" class="about-us-section sections">
+    <section id="about-us"  data-speed="1" class="about-us-section sections">
         <div class="container">
-            <div class="row">
+            <div class="row" >
 
                 <div class="col-4 left-img" data-aos="fade-right" data-aos-offset="300">
                     <img src="images/about.png" alt="">
                 </div>
-                <div class="col-6">
-                    <h2>ABOUT US</h2>
+                <div class="col-6" >
+                    <h2 >ABOUT US</h2>
                     <div class="fake-underline"><img src="images/underline.png" alt="Underline"></div>
 
 
@@ -174,14 +167,14 @@
                         <p class="nugget">" Redefining the Future with <span>Creativity</span>, <span>Passion</span>,
                             and <span>Integrity</span>"
                         </p>
-                        <p class="simple-para"> Here at Trevanta Technology, As a leading technology company, we are
+                        <p  class="simple-para"> Here at Trevanta Technology, As a leading technology company, we are
                             dedicated to fostering
                             innovation and providing safe, clever, and long-lasting IT solutions to companies of all
                             sizes.
                             Our goal is to change how businesses function in the quickly changing digital environment of
                             today.</p>
 
-                        <a href="#" class="link" data-aos="flip-down">Learn More</a>
+                        <a   href="#professional_services" class="link" >Learn More</a>
                     </article>
 
 
@@ -193,10 +186,10 @@
     <section class="professional-services-section sections">
 
         <div class="container">
-            <div class="col-md-12">
+            <div class="col-md-12" id="professional_services" >
                 <h2 data-aos="zoom-in-up">OUR PROFESSIONAL SERVICES</h2>
                 <!-- data-aos="fade-right" data-aos-offset="200" -->
-                <article class="services-cards d-flex justify-center">
+                <article   class="services-cards d-flex justify-center">
 
                     <div class="service-card">
                         <img src="images/it-consulting.png" alt="IT Consulting Services">
@@ -324,10 +317,10 @@
                         <article class="footer-nav d-flex flex-column">
                             <p>2023 Trevanta. All rights reserved</p>
                             <ul class="d-flex justify-content-center">
-                                <li class="footer-nav-links"><a href="index.html">Home</a></li>
-                                <li class="footer-nav-links"><a href="about-trevanta.html" class="active">About</a></li>
+                                <li class="footer-nav-links"><a href="index.html" class="active">Home</a></li>
+                                <li class="footer-nav-links"><a href="about-trevanta.html" >About</a></li>
                                 <li class="footer-nav-links"><a href="services.html">Services</a></li>
-                                <li class="footer-nav-links"><a href="career.html">Career</a></li>
+                                <li class="footer-nav-links"><a href="careers.html">Career</a></li>
                                 <li class="footer-nav-links"><a href="blog.html">Blog</a></li>
                                 <li class="footer-nav-links"><a href="contact.html">Contact</a></li>
                             </ul>
@@ -418,13 +411,13 @@
         AOS.init();
         /* Open */
         function openNav() {
-            document.getElementById("myNav").style.height = "100%";
+            document.getElementById("myNav").style.top = "0vh";
             document.body.style.cssText = "   overflow-y: hidden;"
         }
 
         /* Close */
         function closeNav() {
-            document.getElementById("myNav").style.height = "0%";
+            document.getElementById("myNav").style.top= "-100vh";
             document.body.style.cssText = "overflow-y: auto;"
         }
     </script>
