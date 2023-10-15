@@ -2048,6 +2048,7 @@ margin-right: 1.5rem;
     width: 100%;
     padding-block: 25px;
     padding-inline: 170px;
+    padding-bottom: 100px;
 }
 
 .service__list-item {
@@ -2061,7 +2062,9 @@ margin-right: 1.5rem;
     transform: translateX(-7.5rem);
 }
 
-.service__list-item__header>img {}
+.service__list-item__header>img {
+    margin-left: 40px;
+}
 
 .service__list-item__header>h2 {
     color: var(--primary-text-color);
@@ -2099,6 +2102,10 @@ margin-right: 1.5rem;
     .service__list-item__header {
         flex-direction: column;
         transform: unset;
+    }
+
+    .service__list-item__header>img {
+        margin-left: -10px;
     }
    
 
