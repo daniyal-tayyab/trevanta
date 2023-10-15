@@ -37,7 +37,7 @@
 
     <title>Contact</title>
 </head>
-<body>
+<body class="body">
     <section class="header-nav">
         <div class="container">
             <div class="row">
@@ -78,6 +78,7 @@
                 <a href="careers.html">Careers</a>
                 <a href="blog.html">Blogs</a>
                 <a class="active" href="contact.html">Contact us</a>
+                <a href="faq.html">FAQs</a>
                 <!-- <div class="nav-first-svg"></div>
       <div class="nav-second-svg"></div> -->
 
@@ -139,6 +140,13 @@
                 <button type="submit">Submit</button>
             </div>
         </form>
+        <div class="modal_overlay"></div>
+        <div class="modal-sucess">
+            <div class="cross">X</div>
+            <h3>Congratulations!</h3>
+            <p>Your message has been submitted successfully.</p>
+            <button class="modal-button">Done</button>
+        </div>
     </section>
 
     <section class="footer">
@@ -157,6 +165,7 @@
                                 <li class="footer-nav-links"><a href="careers.html">Career</a></li>
                                 <li class="footer-nav-links"><a href="blog.html">Blog</a></li>
                                 <li class="footer-nav-links"><a href="contact.html"  class="active">Contact</a></li>
+                                <li class="footer-nav-links"><a href="faq.html">FAQs</a></li>
                             </ul>
 
                             <div class="social-links d-flex">
@@ -185,20 +194,17 @@
         })();
     </script>
     <script>
-        
-        AOS.init();
-        /* Open */
-        function openNav() {
-            document.getElementById("myNav").style.top = "0vh";
+           /* Open */
+           function openNav() {
+            document.getElementById("myNav").style.height = "100%";
             document.body.style.cssText = "   overflow-y: hidden;"
         }
 
         /* Close */
         function closeNav() {
-            document.getElementById("myNav").style.top= "-100vh";
-            document.body.style.cssText = "overflow-y: auto;"
+            document.getElementById("myNav").style.height = "0%";
+            document.body.style.cssText = "   overflow-y: auto;"
         }
-    
         const phoneInputField = document.querySelector("#phone");
         const phoneInput = window.intlTelInput(phoneInputField, {
           utilsScript:
@@ -210,6 +216,23 @@
         const email = document.querySelector("#email");
         const phone = document.querySelector("#phone");
         const message = document.querySelector("#message");
+        const modal = document.querySelector(".modal-sucess");
+        const overlay = document.querySelector(".modal_overlay");
+        const modalButton = document.querySelector(".modal-button");
+        const cross = document.querySelector(".cross");
+
+        modalButton.addEventListener("click", function() {
+            overlay.style.opacity = 0;
+            overlay.style.zIndex = -10;
+            modal.style.opacity = 0;
+            modal.style.zIndex = -100;
+        });
+        cross.addEventListener("click", function() {
+            overlay.style.opacity = 0;
+            overlay.style.zIndex = -10;
+            modal.style.opacity = 0;
+            modal.style.zIndex = -100;
+        });
 
         let firstName = "";
         let lastName = "";
@@ -284,7 +307,11 @@
             emailjs.send('service_ofnmdja', 'template_xhkqyiw', params)
                 .then(function() {
                     console.log('SUCCESS!');
-                    alert("Message sent!");
+                    // alert("Message sent!");
+                    overlay.style.opacity = 1;
+                    overlay.style.zIndex = 10;
+                    modal.style.opacity = 1;
+                    modal.style.zIndex = 100;
                     reset();
                 }, function(error) {
                     console.log('FAILED...', error);

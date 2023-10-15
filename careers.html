@@ -80,6 +80,7 @@
                 <a class="active" href="careers.html">Careers</a>
                 <a href="blog.html">Blogs</a>
                 <a href="contact.html">Contact us</a>
+                <a href="faq.html">FAQs</a>
                 <!-- <div class="nav-first-svg"></div>
       <div class="nav-second-svg"></div> -->
 
@@ -95,31 +96,36 @@
     </div>
     <section class="careers">
         <h2 class="career__heading">Please fill the form and upload yor resume</h2>
-        <form class="form">
+        <form class="form" id="form">
             <div class="form__row">
                 <div class="row__item">
                     <label for="firstName">First Name *</label>
-                    <input id="firstName" placeholder="First name"/>
+                    <input id="firstName" placeholder="First name"  />
+                    <p class="val-error fname">This field is reaquired *</p>
                 </div>
                 <div class="row__item">
                     <label for="lastName">Last Name *</label>
-                    <input id="lastName" placeholder="Last name"/>
+                    <input id="lastName" placeholder="Last name" />
+                    <p class="val-error lname">This field is reaquired *</p>
                 </div>
             </div>
             <div class="form__row">
                 <div class="row__item">
                     <label for="email">Email *</label>
                     <input id="email" placeholder="Email"/>
+                    <p class="val-error mail">This field is reaquired *</p>
                 </div>
                 <div class="row__item">
                     <label for="phone">Phone *</label>
-                    <input id="phone" placeholder="Phone"/>
+                    <input id="phone" placeholder="Phone" />
+                    <p class="val-error phone">This field is reaquired *</p>
                 </div>
             </div>
             <div class="form__row">
                 <div class="row__item">
                     <label for="position">Position Applying For *</label>
-                    <input id="position" placeholder="Position"/>
+                    <input id="position" placeholder="Position" />
+                    <p class="val-error pos">This field is reaquired *</p>
                 </div>
             </div>
             <div class="form__row">
@@ -130,12 +136,24 @@
             </div>
             <div class="form__row">
                 <div class="row__item">
-                    <label for="resume">Upload Your Resume</label>
-                    <input id="resume" placeholder="Browse file"/>
+                    <label>Upload Your Resume</label>
+                    <input id="resume" type="file" class="hidden" accept="application/pdf" />
+                    <label for="resume" class="file-input">Browse Files</label>
                 </div>
             </div>
+            <div class="form__row">
+                <button type="submit">Submit</button>
+            </div>
         </form>
+        <div class="modal_overlay"></div>
+        <div class="modal-sucess">
+            <div class="cross">X</div>
+            <h3>Congratulations!</h3>
+            <p>Your application has been submitted successfully.</p>
+            <button class="modal-button">Done</button>
+        </div>
     </section>
+
 
     <section class="footer">
         <footer>
@@ -152,7 +170,8 @@
                                 <li class="footer-nav-links"><a href="services.html">Services</a></li>
                                 <li class="footer-nav-links"><a href="careers.html" class="active">Career</a></li>
                                 <li class="footer-nav-links"><a href="blog.html">Blog</a></li>
-                                <li class="footer-nav-links"><a href="contact-us.html">Contact</a></li>
+                                <li class="footer-nav-links"><a href="contact.html">Contact</a></li>
+                                <li class="footer-nav-links"><a href="faq.html">FAQs</a></li>
                             </ul>
 
                             <div class="social-links d-flex">
@@ -171,29 +190,184 @@
     <script src="bootstrap/bootstrap.min.js"></script>
     <script src="packages/flickity-min.css"></script>
     <script src="packages/flickity-min.js"></script>
-    <script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <!-- <script>
         const phoneInputField = document.querySelector("#phone");
         const phoneInput = window.intlTelInput(phoneInputField, {
           utilsScript:
             "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
         });
-      </script>
+      </script> -->
 
-<script>
-  
+      <script>
         AOS.init();
-        /* Open */
-        function openNav() {
-            document.getElementById("myNav").style.top = "0vh";
-            document.body.style.cssText = "   overflow-y: hidden;"
-        }
+           /* Open */
+           function openNav() {
+               document.getElementById("myNav").style.top = "0vh";
+               document.body.style.cssText = "   overflow-y: hidden;"
+           }
+   
+           /* Close */
+           function closeNav() {
+               document.getElementById("myNav").style.top= "-100vh";
+               document.body.style.cssText = "overflow-y: auto;"
+           }
+       </script>
 
-        /* Close */
-        function closeNav() {
-            document.getElementById("myNav").style.top= "-100vh";
-            document.body.style.cssText = "overflow-y: auto;"
-        }
+<script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('9r1IBDWdOp2NSDN_4');
+    })();
+</script>
+<script>
+       /* Open */
+       function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+        document.body.style.cssText = "   overflow-y: hidden;"
+    }
 
+    /* Close */
+    function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+        document.body.style.cssText = "   overflow-y: auto;"
+    }
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+    const form = document.querySelector(".form");
+    const first_name = document.querySelector("#firstName");
+    const last_name = document.querySelector("#lastName");
+    const email = document.querySelector("#email");
+    const phone = document.querySelector("#phone");
+    const position = document.querySelector("#position");
+    const message = document.querySelector("#message");
+    const fileInput = document.querySelector("#resume");
+    const modal = document.querySelector(".modal-sucess");
+    const overlay = document.querySelector(".modal_overlay");
+    const modalButton = document.querySelector(".modal-button");
+    const cross = document.querySelector(".cross");
+
+    modalButton.addEventListener("click", function() {
+            overlay.style.opacity = 0;
+            overlay.style.zIndex = -10;
+            modal.style.opacity = 0;
+            modal.style.zIndex = -100;
+    });
+    cross.addEventListener("click", function() {
+        overlay.style.opacity = 0;
+        overlay.style.zIndex = -10;
+        modal.style.opacity = 0;
+        modal.style.zIndex = -100;
+    });
+
+    let firstName = "";
+    let lastName = "";
+    let emailInput = "";
+    let phone_input = "";
+    let positionInput = "";
+    let messageInput = "";
+    let resume = "";
+
+    let fname = document.querySelector(".fname");
+    let lname = document.querySelector(".lname");
+    let mail = document.querySelector(".mail");
+    let ph = document.querySelector(".phone");
+    let pos = document.querySelector(".pos");
+
+    fileInput.addEventListener("change", () => {
+        const selectedFile = fileInput.files[0];
+        console.log(selectedFile);
+        resume = selectedFile;
+    });
+
+    first_name.addEventListener("input", e => {
+        firstName = e.target.value;
+        if(!firstName) {
+            fname.style.opacity = "1";
+        } else {
+            fname.style.opacity = "0"
+        }
+    });
+    last_name.addEventListener("input", e => {
+        lastName = e.target.value;
+        if(!lastName) {
+            lname.style.opacity = "1";
+        } else {
+            lname.style.opacity = "0"
+        }
+    });
+    email.addEventListener("input", e => {
+        emailInput = e.target.value;
+        if(!emailInput) {
+            mail.style.opacity = "1";
+        } else {
+            mail.style.opacity = "0"
+        }
+    });
+    phone.addEventListener("input", e => {
+        phone_input = e.target.value;
+        if(!phone_input) {
+            ph.style.opacity = "1";
+        } else {
+            ph.style.opacity = "0"
+        }
+    });
+    position.addEventListener("input", e => {
+        positionInput = e.target.value;
+        if(!positionInput) {
+            pos.style.opacity = "1";
+        } else {
+            pos.style.opacity = "0"
+        }
+    });
+    message.addEventListener("input", e => messageInput = e.target.value);
+
+    form.addEventListener("submit", event => {
+        event.preventDefault();
+        if(!firstName) {
+            fname.style.opacity = "1";
+        } 
+        if (!lastName) {
+            lname.style.opacity = "1";
+        } 
+        if (!emailInput) {
+            mail.style.opacity = "1";
+        }
+        if (!phone_input) {
+            ph.style.opacity = "1";
+        }
+        if (!positionInput) {
+            pos.style.opacity = "1";
+        }
+        if (!firstName || !lastName || !emailInput || !phoneInput || !positionInput) {
+            return;
+        }
+        const params = {
+             firstName,
+             lastName,
+             emailInput,
+             phone: phone_input,
+             position: positionInput,
+             message: messageInput,
+             resume
+        }
+        // emailjs.send(serviceID, templateID, publicKey);
+        emailjs.send('service_d3xm2w2', 'template_4psabl9', params)
+            .then(function() {
+                console.log('SUCCESS!');
+                overlay.style.opacity = 1;
+                overlay.style.zIndex = 10;
+                modal.style.opacity = 1;
+                modal.style.zIndex = 100;
+            }, function(error) {
+                console.log('FAILED...', error);
+            });
+    });
 </script>
 </body>
 </html>
