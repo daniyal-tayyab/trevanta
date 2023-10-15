@@ -395,6 +395,15 @@ color: var(--primary-color);
     pointer-events: none;
 }
 
+/* .nav-svg-group{
+    position: absolute;
+    bottom: 0;
+
+} */
+
+.nav-svg-group div img{
+    width: 100%;
+}
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
     .overlay a {
@@ -705,6 +714,7 @@ footer {
     border-bottom: 5px solid var(--primary-color);
     /* z-index: 1; */
     position: relative;
+    overflow: hidden;
 
 }
 
@@ -1155,6 +1165,88 @@ body {
     justify-content: space-between;
     
 }
+.mission-vision{
+    padding-block: 90px 0px;
+    background-color: var(--global-bg-color);
+}
+.mission-vision-boxes{
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+.mission-vision-box{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 444px;
+    width: 100%;
+    border: 1px solid var(--primary-text-color);
+    padding: 43px 35px 73px 34px;
+    border-style: dashed;
+    border-radius: 8px;
+    text-align: center;
+    height: 441px;
+    background-color:rgba(34, 143, 125, 0.05);
+}
+.vision-img{
+height: 100px;
+max-width: 100px;
+width: 100%;
+margin-inline: auto;
+}
+.mission-img{
+    height: 116px;
+    max-width: 116px;
+    width: 100%;
+    margin-inline: auto;
+}
+.mission-vision-head{
+    font-family: var(--primary-font-family);
+font-size: 50px;
+font-weight: 700;
+line-height: 57px;
+letter-spacing: 0em;
+text-align: center;
+margin-bottom: 63px;
+text-decoration: none;
+
+}
+.mission-vision-head span{
+color: var(--primary-color);
+}
+
+
+.mission-vision-box h3{
+
+    font-family: var(--primary-font-family);
+font-size: 30px;
+font-weight: 700;
+line-height: 34px;
+letter-spacing: 0.04em;
+text-align: center;
+color: var(--off-white);
+
+}
+
+
+.mission-vision-box P{
+    font-family: var(--primary-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.mission-head{
+    /* padding-block:54px 49px; */
+}
+.vision-head{
+/* padding-block:36px 49px; */
+}
+
 
 .project-desc{
 margin-right: 1.5rem;
@@ -1496,8 +1588,9 @@ margin-right: 1.5rem;
 }
 
 @media screen and (max-width:767px) {
+    .nav-svg-group{display: none;}
     .hero-welcome {
-        font-size: 3rem
+        font-size: 3rem;
     }
 
     .slick-arrow{
@@ -2014,11 +2107,30 @@ margin-right: 1.5rem;
     }
 }
 
+@media (max-width: 680pc) {
+    .services__hero__content>h1 {
+        font-size: 40px;
+    }
+    .services__hero__content > p {
+        font-size: 24px;
+    }
+}
+
 @media (max-width: 600px) {
     .services__list {
         padding-inline: 20px;
     }
 }
+@media (max-width: 500pc) {
+    .services__hero__content>h1 {
+        font-size: 35px;
+    }
+    .services__hero__content > p {
+        font-size: 20px;
+    }
+}
+
+
 
 
 /* ************************************************************************************************ */
@@ -2167,6 +2279,9 @@ margin-right: 1.5rem;
     .career-hero-content > h1 {
         font-size: 30px;
     }
+    .mission-vision-boxes{
+        flex-direction: column;
+    }
   }
 
   @media (max-width: 650px) {
@@ -2265,6 +2380,9 @@ margin-right: 1.5rem;
     }
     .faq-description {
         font-size: 13px;
+    }
+    .mission-vision-head{
+        font-size: 36px;
     }
 }
 
