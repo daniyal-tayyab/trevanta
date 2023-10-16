@@ -98,48 +98,48 @@
     </div>
     <section class="careers">
         <h2 class="career__heading">Please fill the form and upload yor resume</h2>
-        <form class="form" id="form">
+        <form enctype="multipart/form-data" method="post" class="form" id="form">
             <div class="form__row">
                 <div class="row__item">
                     <label for="firstName">First Name *</label>
-                    <input id="firstName" placeholder="First name"  />
+                    <input id="firstName" placeholder="First name" name="firstName"  />
                     <p class="val-error fname">This field is reaquired *</p>
                 </div>
                 <div class="row__item">
                     <label for="lastName">Last Name *</label>
-                    <input id="lastName" placeholder="Last name" />
+                    <input id="lastName" placeholder="Last name" name="lastName" />
                     <p class="val-error lname">This field is reaquired *</p>
                 </div>
             </div>
             <div class="form__row">
                 <div class="row__item">
                     <label for="email">Email *</label>
-                    <input id="email" placeholder="Email"/>
+                    <input id="email" placeholder="Email" name="emailInput"/>
                     <p class="val-error mail">This field is reaquired *</p>
                 </div>
                 <div class="row__item">
                     <label for="phone">Phone *</label>
-                    <input id="phone" placeholder="Phone" />
+                    <input id="phone" placeholder="Phone" name="phone" />
                     <p class="val-error phone">This field is reaquired *</p>
                 </div>
             </div>
             <div class="form__row">
                 <div class="row__item">
                     <label for="position">Position Applying For *</label>
-                    <input id="position" placeholder="Position" />
+                    <input id="position" placeholder="Position" name="position" />
                     <p class="val-error pos">This field is reaquired *</p>
                 </div>
             </div>
             <div class="form__row">
                 <div class="row__item">
                     <label for="message">Message</label>
-                    <textarea id="message" placeholder="Message" rows="10"></textarea>
+                    <textarea id="message" placeholder="Message" rows="10" name="message"></textarea>
                 </div>
             </div>
             <div class="form__row">
                 <div class="row__item">
                     <label>Upload Your Resume</label>
-                    <input id="resume" type="file" class="hidden" accept="application/pdf" />
+                    <input id="resume" type="file" class="hidden" accept="application/pdf" name="resume" />
                     <label for="resume" class="file-input">Browse Files</label>
                 </div>
             </div>
@@ -347,10 +347,12 @@
              phone: phone_input,
              position: positionInput,
              message: messageInput,
+             filename: resume.name,
              resume
         }
+        console.warn(resume.name);
         // emailjs.send(serviceID, templateID, publicKey);
-        emailjs.send('service_d3xm2w2', 'template_4psabl9', params)
+        emailjs.sendForm('service_d3xm2w2', 'template_4psabl9', "#form")
             .then(function() {
                 console.log('SUCCESS!');
                 overlay.style.opacity = 1;
