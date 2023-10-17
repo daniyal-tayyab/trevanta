@@ -1167,6 +1167,7 @@ body {
 
 .projects-by-trevanta {
     justify-content: space-between;
+    transform: translateY(-7.5rem);
     
 }
 .mission-vision{
@@ -1428,6 +1429,10 @@ position: relative;
 }
 
 @media screen and (max-width:1200px) {
+    .projects-by-trevanta {
+        transform: translateY(-5.5rem);
+        
+    }
     .about-us-section {
         padding-block: 0px;
     }
@@ -1502,6 +1507,11 @@ position: relative;
 }
 
 @media screen and (max-width:992px) {
+
+    .projects-by-trevanta {
+        transform: translateY(-3.5rem);
+        
+    }
 
     .v-trevanta {
         line-height: 16px;
