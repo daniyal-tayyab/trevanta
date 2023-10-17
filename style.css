@@ -2042,7 +2042,7 @@ position: relative;
 .services__hero {
     width: 100%;
     height: 543px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("./images/services-bg.gif");
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url("./images/services-vid.gif");
     background-size: cover;
     background-position: center;
     position: relative;
