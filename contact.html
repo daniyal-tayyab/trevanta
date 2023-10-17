@@ -38,7 +38,7 @@
     <title>Contact</title>
 </head>
 <body class="body">
-    <section class="header-nav">
+    <section class="header-nav" id="scroll-to-top">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 d-flex align-items-center header-navbar">
@@ -48,10 +48,10 @@
                         <a href="https://twitter.com/trevanta_ae" target="_blank"><img src="images/twitter-icon.png" alt="Trevanta on Twitter"></a>
 
                     </div>
-                    <div class="navbar-logo d-flex align-items-center">
+                    <a href="/" class="navbar-logo d-flex align-items-center">
                         <img src="images/Trevanta-Logo-1.png" alt="">
                         <img src="images/Trevanta-Logo-2.png" alt="">
-                    </div>
+                    </a>
 
                     <button class="nav-toggle-btn" onclick="openNav()">
                         <img src="images/toggle-btn.png" alt="Toggle Menu">
@@ -78,11 +78,11 @@
                 <a href="careers.html">Careers</a>
                 <a href="blog.html">Blogs</a>
                 <a class="active" href="contact.html">Contact us</a>
-                <a href="faq.html">FAQs</a>
-                <div class="nav-svg-group">
+                <a hidden href="faq.html">FAQs</a>
+                <!-- <div class="nav-svg-group">
                     <div class="nav-first-svg"><img src="images/nav-first.png" alt=""></div>
                     <div class="nav-second-svg"><img src="images/nav-second.png" alt=""></div>
-                </div>
+                </div> -->
 
 
             </div>
@@ -156,7 +156,9 @@
             <div class="container">
                 <div class="row justify-center">
                     <div class="col-12">
-                        <img src="images/footer-logo.png" alt="Logo of Traventa Technology">
+                        <a href="#scroll-to-top">
+                            <img src="images/footer-logo.png" alt="Logo of Traventa Technology">
+                        </a>
 
                         <article class="footer-nav d-flex flex-column">
                             <p>2023 Trevanta. All rights reserved</p>
